@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\models\\class_session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\models\\class_session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\models\\class_user_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\models\\class_user_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\models\\class_accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\models\\class_accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\myimage\\myimage\\myimage\\db_context\\db_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\db_context\\db_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "class_session.cs",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Models\\class_session.cs",
+              "RelativeDocumentMoniker": "MyImage\\Models\\class_session.cs",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Models\\class_session.cs",
+              "RelativeToolTip": "MyImage\\Models\\class_session.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T21:30:49.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LogIn.cshtml",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Views\\Home\\LogIn.cshtml",
+              "RelativeDocumentMoniker": "MyImage\\Views\\Home\\LogIn.cshtml",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Views\\Home\\LogIn.cshtml",
+              "RelativeToolTip": "MyImage\\Views\\Home\\LogIn.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAFUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T20:57:49.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Program.cs",
+              "RelativeDocumentMoniker": "MyImage\\Program.cs",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Program.cs",
+              "RelativeToolTip": "MyImage\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T20:27:14.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "class_accounts.cs",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Models\\class_accounts.cs",
+              "RelativeDocumentMoniker": "MyImage\\Models\\class_accounts.cs",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Models\\class_accounts.cs",
+              "RelativeToolTip": "MyImage\\Models\\class_accounts.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T20:20:00.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MyImage\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MyImage\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAPwAAAAAAAAAAAAAABsBAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T11:22:36.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SignUp.cshtml",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Views\\Home\\SignUp.cshtml",
+              "RelativeDocumentMoniker": "MyImage\\Views\\Home\\SignUp.cshtml",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Views\\Home\\SignUp.cshtml",
+              "RelativeToolTip": "MyImage\\Views\\Home\\SignUp.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAACsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T11:10:30.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DB_context.cs",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\DB_Context\\DB_context.cs",
+              "RelativeDocumentMoniker": "MyImage\\DB_Context\\DB_context.cs",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\DB_Context\\DB_context.cs",
+              "RelativeToolTip": "MyImage\\DB_Context\\DB_context.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T11:04:35.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "class_user_table.cs",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Models\\class_user_table.cs",
+              "RelativeDocumentMoniker": "MyImage\\Models\\class_user_table.cs",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Models\\class_user_table.cs",
+              "RelativeToolTip": "MyImage\\Models\\class_user_table.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T18:33:11.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MyImage\\Controllers\\HomeController.cs",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MyImage\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA5wBoAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T18:27:59.247Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

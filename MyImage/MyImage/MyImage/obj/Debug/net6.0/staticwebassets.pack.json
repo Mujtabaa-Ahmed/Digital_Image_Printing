@@ -1,0 +1,457 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyImage.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MyImage.bundle.scp.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\css\\animate.min.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\boxicons.min.css",
+      "PackagePath": "staticwebassets\\css\\boxicons.min.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\meanmenu.css",
+      "PackagePath": "staticwebassets\\css\\meanmenu.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\nice-select.min.css",
+      "PackagePath": "staticwebassets\\css\\nice-select.min.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\css\\theme-dark.css",
+      "PackagePath": "staticwebassets\\css\\theme-dark.css"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\fonts\\boxicons.eot",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.eot"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\fonts\\boxicons.svg@",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.svg@"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\fonts\\boxicons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.ttf"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\fonts\\boxicons.woff",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.woff"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\fonts\\boxicons.woff2",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.woff2"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\about\\1.png",
+      "PackagePath": "staticwebassets\\img\\about\\1.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\about\\2.png",
+      "PackagePath": "staticwebassets\\img\\about\\2.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\about\\3.png",
+      "PackagePath": "staticwebassets\\img\\about\\3.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\about\\bg-shape.png",
+      "PackagePath": "staticwebassets\\img\\about\\bg-shape.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\about\\bg-shape2.png",
+      "PackagePath": "staticwebassets\\img\\about\\bg-shape2.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\about\\shape1.png",
+      "PackagePath": "staticwebassets\\img\\about\\shape1.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\10.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\10.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\2.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\3.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\4.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\5.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\6.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\7.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\8.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\8.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\9.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\9.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\blog\\blog-dtls.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\blog-dtls.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\designer\\1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\designer\\2.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\designer\\3.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\designer\\4.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\designer\\5.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\designer\\6.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\designer\\7.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\8.jpg",
+      "PackagePath": "staticwebassets\\img\\designer\\8.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\favicon.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\footer-logo.png",
+      "PackagePath": "staticwebassets\\img\\footer-logo.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home1\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\home1\\1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home1\\s-1.png",
+      "PackagePath": "staticwebassets\\img\\home1\\s-1.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home1\\s-2.png",
+      "PackagePath": "staticwebassets\\img\\home1\\s-2.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home1\\s-3.png",
+      "PackagePath": "staticwebassets\\img\\home1\\s-3.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home1\\s-4.png",
+      "PackagePath": "staticwebassets\\img\\home1\\s-4.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home2\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\home2\\1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home2\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\home2\\2.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home2\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\home2\\3.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home3\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\home3\\1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\home3\\2.png",
+      "PackagePath": "staticwebassets\\img\\home3\\2.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\10.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\10.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\11.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\11.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\12.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\12.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\2.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\3.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\4.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\5.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\6.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\7.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\8.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\8.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\inner-banner\\9.jpg",
+      "PackagePath": "staticwebassets\\img\\inner-banner\\9.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\night.png",
+      "PackagePath": "staticwebassets\\img\\night.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\products\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\products\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\2.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\products\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\3.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\products\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\4.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\products\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\5.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\products\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\6.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\products\\pro-dtls.jpg",
+      "PackagePath": "staticwebassets\\img\\products\\pro-dtls.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\products\\shape.png",
+      "PackagePath": "staticwebassets\\img\\products\\shape.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\2.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\3.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\4.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\5.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\6.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\dtls1.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\dtls1.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\dtls2.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\dtls2.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\service\\dtls3.jpg",
+      "PackagePath": "staticwebassets\\img\\service\\dtls3.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\shape\\1.png",
+      "PackagePath": "staticwebassets\\img\\shape\\1.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\sunny.png",
+      "PackagePath": "staticwebassets\\img\\sunny.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\testimonial\\1.png",
+      "PackagePath": "staticwebassets\\img\\testimonial\\1.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\testimonial\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial\\2.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\testimonial\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial\\3.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\testimonial\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial\\4.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\testimonial\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\testimonial\\5.jpg"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\testimonial\\bg-shape.png",
+      "PackagePath": "staticwebassets\\img\\testimonial\\bg-shape.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\testimonial\\bg-shape2.png",
+      "PackagePath": "staticwebassets\\img\\testimonial\\bg-shape2.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\testimonial\\shape1.png",
+      "PackagePath": "staticwebassets\\img\\testimonial\\shape1.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\user.png",
+      "PackagePath": "staticwebassets\\img\\user.png"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\contact-form-script.js",
+      "PackagePath": "staticwebassets\\js\\contact-form-script.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\form-validator.min.js",
+      "PackagePath": "staticwebassets\\js\\form-validator.min.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\meanmenu.js",
+      "PackagePath": "staticwebassets\\js\\meanmenu.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\wwwroot\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\js\\wow.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MyImage.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.MyImage.props",
+      "PackagePath": "build\\MyImage.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MyImage.props",
+      "PackagePath": "buildMultiTargeting\\MyImage.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.MyImage.props",
+      "PackagePath": "buildTransitive\\MyImage.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
