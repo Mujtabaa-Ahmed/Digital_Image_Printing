@@ -265,8 +265,8 @@
                                 {
                                     <div class="nav-item d-flex justify-content-center ms-5">
                                         <a href="#" id="mod" data-bs-toggle="modal" data-bs-target="#myModal2" class="">
-                                            <div>
-                                                <img src="~/img/user.png" alt="Alternate Text" class="w-100" />
+                                            <div class="d-flex justify-content-center">
+                                                <img src="~/img/user.png" alt="Alternate Text" width="50px" />
                                             </div>
                                             <div>
                                                 <h6>@Class_session.user_fname @Class_session.user_lname</h6>
@@ -274,6 +274,26 @@
                                         </a>
                                     </div>
                                 }
+
+                                @if (string.IsNullOrEmpty(Class_session.user_id))
+                                {
+
+                                        <li class="me-2 nav-item">
+                                            <a asp-controller="Home" asp-action="LogIn" class="nav-link text-dark">
+                                                LogIn
+                                            </a>
+                                        </li>
+
+
+                                   
+                                        <div class="menu-btn">
+                                            <a class="phone-btn" asp-controller="Home" asp-action="SignUp">
+                                                SignUp
+                                            </a>
+                                        </div>
+                                        
+                                    
+                                  }
                             </ul>
                         
                        
@@ -281,22 +301,7 @@
                     </div>
                    
                   
-                            @if(string.IsNullOrEmpty(Class_session.user_id))
-                            {
-                                <ul>
-                                    <li class="nav-item">
-                                        <a asp-controller="Home" asp-action="LogIn" class="nav-link text-dark">
-                                            LogIn
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <div class="menu-btn">
-                                    <a class="phone-btn" asp-controller="Home" asp-action="SignUp">
-                                        SignUp
-                                    </a>
-                                </div>
-                            }
+                           
                       
                         
 

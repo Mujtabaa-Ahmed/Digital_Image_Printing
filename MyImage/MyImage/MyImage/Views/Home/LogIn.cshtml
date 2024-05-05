@@ -26,7 +26,7 @@
         <div class="contact-wrap-form sing-in-width">
             <div class="section-title text-center">
                 <span>LogIn</span>
-                <h2 id="confirmation">Sing In to your account!</h2>
+                <h2 id="validation">Sing In to your account!</h2>
                 <p>with your social network</p>
                 <ul class="sing-social-icon">
                     <li>
@@ -40,16 +40,18 @@
                     </li>
                 </ul>
             </div>
-            <form>
+            
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
                             <input class="form-control" id="login_mail" type="text" name="name" placeholder="Username or Email">
+                            <span id="mailV"  class="text-danger "></span>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
                             <input class="form-control" id="password" type="password" name="password" placeholder="Password">
+                            <span id="pasV" class="text-danger span"></span>
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-6 form-condition">
@@ -64,9 +66,9 @@
                         <a class="forget" href="recover-password.html">Forgot my password?</a>
                     </div>
                     <div class="col-12 text-center">
-                        <a id="log" class="default-btn btn-two sing-btn">
+                        <button id="log" class="default-btn btn-two sing-btn">
                             Sing In Now
-                        </a>
+                        </button>
                     </div>
                     <div class="col-12">
                         <p class="account-desc">
@@ -75,30 +77,59 @@
                         </p>
                     </div>
                 </div>
-            </form>
+            
         </div>
     </div>
 </section>
 <script>
     $(document).ready(function () {
         $("#log").click(function () {
+            $("#mailV").html("");
+            $("#pasV").html("");
+            $("#login_mail").css("border-color", "transparent");
+            $("#password").css("border-color", "transparent");
+
             var mail = $("#login_mail").val();
             var pass = $("#password").val();
-            var credentials = { "email": mail, "password": pass };
-            $.ajax({
-                type:"post",
-                url:'@Url.Action("Logining" , "Home")',
-                data: credentials,
-                success: function (data)
-                {
-                    location.reload();
-                        $("#confirmation").html("Loged In").css("color", "green");
-                },
-                error: function () 
-                {   
-                    alert("E-mail or Password is incorrect");
+            if (mail != "" && pass != "") {
+                var credentials = { "email": mail, "password": pass };
+                $.ajax({
+                    type: "post",
+                    url: '@Url.Action("Logining" , "Home")',
+                    data: credentials,
+                    success: function (data) {
+                        if (data == "Loged In") {
+                            location.reload();
+                        } else if (data == "E-mail or Password is incorrect") {
+                            $("#validation").html("E-mail or Password is incorrect");
+                            $("#validation").css("color","red");
+                        }
+
+                    },
+                    error: function () {
+                        alert("E-mail or Password is incorrect");
+                    }
+                });
+            } else if (mail == "" && pass == "") {
+                $("#password").css("border-color", "red");
+                $("#login_mail").css("border-color", "red");
+                $("#mailV").html("Empity Field");
+                $("#pasV").html("Empity Field");
+
+            } else 
+            {
+                if (mail == "") {
+                    $("#login_mail").css("border-color", "red");
+                    $("#mailV").html("Empity Field");
+
+                } else if (pass == "") {
+                    $("#password").css("border-color", "red");
+                    $("#pasV").html("Empity Field");
+
                 }
-            });
+            }
+            
+            
         });
         
     });

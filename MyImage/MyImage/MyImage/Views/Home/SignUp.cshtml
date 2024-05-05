@@ -41,21 +41,27 @@
                     </li>
                 </ul>
             </div>
-            <form>
+          
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group ">
                             <input class="form-control col-lg-6" id="f_name" type="text" name="first_name" placeholder="First Name">
+                        <span id="match1" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group ">
                             <input class="form-control col-lg-6" id="l_name" type="text" name="last_name" placeholder="Last Name">
+                        <span id="match2" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
                             <input class="form-control" id="email" type="email" name="e_mail" placeholder="Email">
+                        <span id="match3" class="text-danger"></span>
+
                         </div>
                     </div>
                     <div class="col-12">
@@ -71,9 +77,9 @@
                         </div>
                     </div>
                     <div class="col-12 text-center">
-                        <a class="default-btn btn-two sing-btn" id="button">
+                        <button class="default-btn btn-two sing-btn" id="button">
                             Sign Up
-                        </a>
+                        </button>
                     </div>
                     <div class="col-12">
                         <p class="account-desc">
@@ -82,7 +88,7 @@
                         </p>
                     </div>
                 </div>
-            </form>
+           
         </div>
     </div>
 </section>
@@ -95,28 +101,85 @@
             var e_mail = $("#email").val();
             var password = $("#pass").val();
             var Confirm_pass = $("#cpass").val();
-            if (password == Confirm_pass) {
-                var add = { "first": first_name, "last": last_name, "mail": e_mail, "password": password, "Confirm": Confirm_pass };
-                $.ajax({
-                    type: "post",
-                    url: '@Url.Action("signingup","Home")',
-                    data: add,
-                    success: function (data) {
-                        window.location.href = '@Url.Action("LogIn" , "Home")'
-                    },
-                    error: function () {
-                        alert("Not Inserted");
-                    }
-                });
-            } else 
-            {
+            if (first_name != "" && last_name != "" && e_mail != "" && password != "" && Confirm_pass != "") {
+                if (password == Confirm_pass) {
+                    var add = { "first": first_name, "last": last_name, "mail": e_mail, "password": password, "Confirm": Confirm_pass };
+                    $.ajax({
+                        type: "post",
+                        url: '@Url.Action("signingup", "Home")',
+                        data: add,
+                        success: function (data) {
+                            window.location.href = '@Url.Action("LogIn", "Home")'
+                        },
+                        error: function () {
+                            alert("Not Inserted");
+                        }
+                    });
+                } else {
+                    $("#pass").css("border-color", "red");
+                    $("#cpass").css("border-color", "red");
+                    $("#f_name").css("border-color", "red");
+                    $("#l_name").css("border-color", "red");
+                    $("#email").css("border-color", "red");
+                    $("#match").html("password not matched");
+                    $("#match_").html("password not matched");
+                }
+            } else if (first_name == "" && last_name == "" && e_mail == "" && password == "" && Confirm_pass == "") {
                 $("#pass").css("border-color", "red");
                 $("#cpass").css("border-color", "red");
                 $("#f_name").css("border-color", "red");
                 $("#l_name").css("border-color", "red");
                 $("#email").css("border-color", "red");
-                $("#match").html("password not matched");
-                $("#match_").html("password not matched");
+                $("#match_").html("Empity Field");
+                $("#match1").html("Empity Field");
+                $("#match2").html("Empity Field");
+                $("#match3").html("Empity Field");
+                $("#match").html("Empity Field");
+            } else if (first_name == "" && last_name == "" && e_mail == "" && password == "") {
+                $("#pass").css("border-color", "red");
+                $("#f_name").css("border-color", "red");
+                $("#l_name").css("border-color", "red");
+                $("#email").css("border-color", "red");
+                $("#match1").html("Empity Field");
+                $("#match2").html("Empity Field");
+                $("#match3").html("Empity Field");
+                $("#match").html("Empity Field");
+
+
+            } else if (first_name == "" && last_name == "" && e_mail == "") {
+                $("#f_name").css("border-color", "red");
+                $("#l_name").css("border-color", "red");
+                $("#email").css("border-color", "red");
+                $("#match3").html("Empity Field");
+                $("#match2").html("Empity Field");
+                $("#match1").html("Empity Field");
+
+            } else if (first_name == "" && last_name == "") {
+                $("#f_name").css("border-color", "red");
+                $("#l_name").css("border-color", "red");
+                $("#match2").html("Empity Field");
+                $("#match1").html("Empity Field");
+
+            } else {
+                if (first_name == "") {
+                    $("#f_name").css("border-color", "red");
+                    $("#match1").html("Empity Field");
+                } else if (last_name == "") {
+                    $("#l_name").css("border-color", "red");
+                    $("#match2").html("Empity Field");
+                } else if (e_mail == "") {
+                    $("#email").css("border-color", "red");
+                    $("#match3").html("Empity Field");
+
+                } else if (password == "") {
+                    $("#match").html("Empity Field");
+                    $("#pass").css("border-color", "red");
+
+                } else if (Confirm_pass == "") {
+                    $("#cpass").css("border-color", "red");
+                    $("#match_").html("Empity Field");
+
+                }
             }
             
            

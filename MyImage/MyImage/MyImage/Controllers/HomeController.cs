@@ -37,11 +37,13 @@ namespace MyImage.Controllers
                 Class_session.user_fname = user[0].first_name.ToString();
                 Class_session.user_lname = user[0].last_name.ToString();
                 Class_session.user_email = user[0].e_mail.ToString();
-                return Content("ok");
+
+
+                return Content("Loged In");
             }
             else 
             {
-                return Content("not ok");
+                return Content("E-mail or Password is incorrect");
             }
         }
         public IActionResult SignUp()

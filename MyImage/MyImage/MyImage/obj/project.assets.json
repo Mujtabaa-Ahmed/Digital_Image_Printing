@@ -2013,11 +2013,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\MyImage.csproj",
+      "projectUniqueName": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\MyImage.csproj",
       "projectName": "MyImage",
-      "projectPath": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\MyImage.csproj",
+      "projectPath": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\MyImage.csproj",
       "packagesPath": "C:\\Users\\Ahmed Mujtaba\\.nuget\\packages\\",
-      "outputPath": "G:\\Ahmed\\C#_Project\\MyImage\\MyImage\\MyImage\\obj\\",
+      "outputPath": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmed Mujtaba\\AppData\\Roaming\\NuGet\\NuGet.Config",

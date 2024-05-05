@@ -9,59 +9,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyImage
 build_property.RootNamespace = MyImage
-build_property.ProjectDir = G:\Ahmed\C#_Project\MyImage\MyImage\MyImage\
+build_property.ProjectDir = G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = G:\Ahmed\C#_Project\MyImage\MyImage\MyImage
+build_property.MSBuildProjectDirectory = G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage
 build_property._RazorSourceGeneratorDebug = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Home/About.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Home/cart.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Home/cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Home/Contact.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Home/Index.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Home/LogIn.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Home/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Home/Privacy.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Home/SignUp.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Home/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Shared/Error.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Shared/_ValidationScriptsPartial.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/_ViewImports.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/_ViewStart.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Ahmed/C\#_Project/MyImage/MyImage/MyImage/Views/Shared/_Layout.cshtml]
+[G:/Ahmed/C\#_Project/Digital_Image_Printing/MyImage/MyImage/MyImage/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gtczi4a7dp
