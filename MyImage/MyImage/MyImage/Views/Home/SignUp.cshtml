@@ -118,9 +118,6 @@
                 } else {
                     $("#pass").css("border-color", "red");
                     $("#cpass").css("border-color", "red");
-                    $("#f_name").css("border-color", "red");
-                    $("#l_name").css("border-color", "red");
-                    $("#email").css("border-color", "red");
                     $("#match").html("password not matched");
                     $("#match_").html("password not matched");
                 }
@@ -161,24 +158,52 @@
                 $("#match1").html("Empity Field");
 
             } else {
-                if (first_name == "") {
-                    $("#f_name").css("border-color", "red");
-                    $("#match1").html("Empity Field");
-                } else if (last_name == "") {
-                    $("#l_name").css("border-color", "red");
-                    $("#match2").html("Empity Field");
-                } else if (e_mail == "") {
-                    $("#email").css("border-color", "red");
-                    $("#match3").html("Empity Field");
-
-                } else if (password == "") {
-                    $("#match").html("Empity Field");
+                if (first_name != "") {
                     $("#pass").css("border-color", "red");
-
-                } else if (Confirm_pass == "") {
                     $("#cpass").css("border-color", "red");
+                    $("#l_name").css("border-color", "red");
+                    $("#email").css("border-color", "red");
                     $("#match_").html("Empity Field");
+                    $("#match2").html("Empity Field");
+                    $("#match3").html("Empity Field");
+                    $("#match").html("Empity Field");
+                } else if (last_name != "") {
+                    $("#pass").css("border-color", "red");
+                    $("#cpass").css("border-color", "red");
+                    $("#f_name").css("border-color", "red");
+                    $("#email").css("border-color", "red");
+                    $("#match_").html("Empity Field");
+                    $("#match1").html("Empity Field");
+                    $("#match3").html("Empity Field");
+                    $("#match").html("Empity Field");
+                } else if (e_mail != "") {
+                    $("#pass").css("border-color", "red");
+                    $("#cpass").css("border-color", "red");
+                    $("#f_name").css("border-color", "red");
+                    $("#l_name").css("border-color", "red");
+                    $("#match_").html("Empity Field");
+                    $("#match1").html("Empity Field");
+                    $("#match2").html("Empity Field");
+                    $("#match").html("Empity Field");
 
+                } else if (password != "") {
+                    $("#cpass").css("border-color", "red");
+                    $("#f_name").css("border-color", "red");
+                    $("#l_name").css("border-color", "red");
+                    $("#email").css("border-color", "red");
+                    $("#match_").html("Empity Field");
+                    $("#match1").html("Empity Field");
+                    $("#match2").html("Empity Field");
+                    $("#match3").html("Empity Field");
+                } else if (Confirm_pass != "") {
+                    $("#pass").css("border-color", "red");
+                    $("#f_name").css("border-color", "red");
+                    $("#l_name").css("border-color", "red");
+                    $("#email").css("border-color", "red");
+                    $("#match1").html("Empity Field");
+                    $("#match2").html("Empity Field");
+                    $("#match3").html("Empity Field");
+                    $("#match").html("Empity Field");
                 }
             }
             

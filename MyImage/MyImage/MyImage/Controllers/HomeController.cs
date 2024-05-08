@@ -46,6 +46,16 @@ namespace MyImage.Controllers
                 return Content("E-mail or Password is incorrect");
             }
         }
+        public IActionResult logout() 
+        {
+            HttpContext.Session.Clear();
+            Class_session.user_email = "";
+            Class_session.user_fname = "";
+            Class_session.user_lname = "";
+            Class_session.user_id = "";
+
+            return RedirectToAction(nameof(Index));
+        }
         public IActionResult SignUp()
         {
             return View();

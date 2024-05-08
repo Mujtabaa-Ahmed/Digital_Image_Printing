@@ -405,7 +405,16 @@ img {
     overflow: hidden;
     z-index: 1
 }
-
+.logout-btn {
+    background-color: #2d3652;
+    padding: 10px 16px;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1
+}
 .menu-btn .phone-btn i {
     font-size: 22px;
     color: #fff;
