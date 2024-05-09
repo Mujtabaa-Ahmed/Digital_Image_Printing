@@ -109,7 +109,11 @@
                         url: '@Url.Action("signingup", "Home")',
                         data: add,
                         success: function (data) {
-                            window.location.href = '@Url.Action("LogIn", "Home")'
+                            if (data == "") {
+                                window.location.href = '@Url.Action("LogIn", "Home")';
+                            } else {
+                                $("#confirmation").html(data).css("color" , "red");
+                            }
                         },
                         error: function () {
                             alert("Not Inserted");

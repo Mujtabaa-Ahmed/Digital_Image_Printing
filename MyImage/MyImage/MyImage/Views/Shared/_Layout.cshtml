@@ -313,6 +313,9 @@
     </div>
 
 
+        
+
+
         <div class="sidebar-modal">
             <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
                 <div class="modal-dialog w-100" role="document">
@@ -342,7 +345,7 @@
                                             <div class="media align-items-end profile-head">
                                                 <div class="profile mr-3 row">
                                                     <img src="~/img/user.png" alt="..." width="130" class="rounded mb-2 img-thumbnail col-4">
-                                                    <a href="#" class="btn btn-outline-dark btn-sm btn-block ">Edit profile</a>
+                                        <a class="btn btn-outline-dark btn-sm logout-btn" asp-action="edit_profile" asp-controller="Home">Edit profile</a>
                                                 </div>
                                                 <div class="media-body mb-5 text-white">
                                                     <h4 class="mt-0 mb-0">@Class_session.user_fname @Class_session.user_lname</h4>
@@ -352,36 +355,44 @@
                                         </div>
 
 
-
+                            
 
 
                             <div class="sidebar-modal-widget">
                                 <h3 class="title">Your Info</h3>
-                                <ul class="contact-info">
+                                <ul class="contact-">
+                                   
                                     <li>
-                                        <i class="bx bx-map"></i>
-                                        Address
-                                        <span>28/A Street, New York, USA</span>
-                                    </li>
-                                    <li>
-                                        <i class="bx bxs-paper-plane"></i>
-                                        Email
+                                        Email :
                                         <span>
                                             <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                               data-cfemail="e2878f838b8ea2928b9a8b91cc818d8f">[email&#160;protected]</a>
+                                               data-cfemail="e2878f838b8ea2928b9a8b91cc818d8f">@Class_session.user_email</a>
                                         </span>
                                     </li>
                                     <li>
-                                        <i class="bx bxs-phone-call"></i>
-                                        Phone
-                                        <span>+1 1234 56 7891, +1 1234 76 6871</span>
+                                        Gander :
+                                        <span>@Class_session.gander</span>
                                     </li>
+                                   
+                                    <li>
+                                        Bate of Birth :
+                                        <span>@Class_session.dateOB</span>
+                                    </li>
+                                    <li>
+                                        Phone :
+                                        <span>@Class_session.number</span>
+                                    </li>
+                                    <li>
+                                        Address :
+                                        <span>@Class_session.adders</span>
+                                    </li>
+                                  
                                 </ul>
                             </div>
 
 
                             <div class="sidebar-modal-widget">
-                                <h3 class="title">LogOut</h3>
+                               
                                 <ul class="contact-info">
                                     <li class="row">
                                         <a asp-action="logout" asp-controller="Home" class="logout-btn">Log Out</a>
@@ -445,6 +456,8 @@
             </div>
         </div>
 
+
+       
 
 </header>
 
