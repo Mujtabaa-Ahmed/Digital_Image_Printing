@@ -128,6 +128,21 @@ namespace MyImage.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult edit_pro() 
+        {
+            var FirstName = Request.Form["fname"].ToString();
+            var LastName = Request.Form["lname"].ToString();
+            var Email = Request.Form["email"].ToString();
+            var PhoneNumber = Request.Form["num"].ToString();
+            var Adress = Request.Form["adress"].ToString();
+            var BD = Request.Form["dob"].ToString();
+            var Gander = Request.Form["gander"].ToString();
+
+            
+            return Content(Gander);
+        
+        }
         public IActionResult Index()
         {
             return View();
