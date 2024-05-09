@@ -13,7 +13,7 @@ namespace MyImage.Controllers
         public HomeController(ILogger<HomeController> logger, DB_context data)
         {
             
-            database = data;
+            this.database = data;
             _logger = logger;
         }
         public IActionResult LogIn()

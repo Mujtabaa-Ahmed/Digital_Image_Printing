@@ -185,7 +185,6 @@ G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MyImage.props
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MyImage.props
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\staticwebassets.pack.json
-G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\scopedcss\bundle\MyImage.styles.css
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\scopedcss\projectbundle\MyImage.bundle.scp.css
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\MyImage.csproj.Up2Date
@@ -194,3 +193,4 @@ G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\MyImage.pdb
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\MyImage.genruntimeconfig.cache
 G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\ref\MyImage.dll
+G:\Ahmed\C#_Project\Digital_Image_Printing\MyImage\MyImage\MyImage\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
