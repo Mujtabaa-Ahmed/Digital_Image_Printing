@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using MyImage.DB_Context;
 using MyImage.Models;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
 using static MyImage.Models.class_accounts;
@@ -133,14 +135,46 @@ namespace MyImage.Controllers
         {
             var FirstName = Request.Form["fname"].ToString();
             var LastName = Request.Form["lname"].ToString();
-            var Email = Request.Form["email"].ToString();
             var PhoneNumber = Request.Form["num"].ToString();
             var Adress = Request.Form["adress"].ToString();
             var BD = Request.Form["dob"].ToString();
             var Gander = Request.Form["gander"].ToString();
+            
+           var user = database.user_tables.FirstOrDefault(x => x.e_mail ==  Class_session.user_email);
+            if (user != null) 
+            {
+                user.f_name = FirstName;
+                user.l_name = LastName;
+                user.p_number = Int64.Parse(PhoneNumber);
+                user.addres = Adress;
+                user.dob = BD;
+                user.gander = Gander;
+
+                database.Update(user);
+            }
+
+            var account = database.Accounts.FirstOrDefault(x => x.e_mail == Class_session.user_email);
+            if (account != null)
+            {
+                account.first_name = FirstName;
+                account.last_name = LastName;
+
+                database.Update(account);
+            }
+
+            Class_session.user_fname = FirstName;
+            Class_session.user_lname = LastName;
+            Class_session.number = PhoneNumber;
+            Class_session.adders = Adress;
+            Class_session.dateOB = BD;
+            Class_session.gander = Gander;
+
 
             
-            return Content(Gander);
+            database.SaveChanges();
+
+            
+            return RedirectToAction(nameof(Index));
         
         }
         public IActionResult Index()

@@ -24,7 +24,7 @@ namespace MyImage.Models
         public string dob { get; set; }
         
         [Required]
-        public int p_number { get; set; }
+        public long p_number { get; set; }
         
         [Required]
         public string addres { get; set; }
