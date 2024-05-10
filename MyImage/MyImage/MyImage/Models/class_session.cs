@@ -10,6 +10,7 @@
         public static string dateOB { get; set; } = string.Empty;
         public static string number { get; set; } = string.Empty;
         public static string adders { get; set; } = string.Empty;
-       
+        public static string image { get; set; } = string.Empty;
+
     }
 }

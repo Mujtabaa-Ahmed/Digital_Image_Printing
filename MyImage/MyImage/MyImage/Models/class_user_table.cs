@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace MyImage.Models
 {
@@ -30,5 +32,10 @@ namespace MyImage.Models
         public string addres { get; set; }
         [Required]
         public string e_mail { get; set; }
+        [Required]
+        public string Profile_photo { get; set; }
+
+        [NotMapped]
+        public IFormFile File { get; set; }
     }
 }

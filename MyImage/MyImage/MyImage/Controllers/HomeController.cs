@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyImage.DB_Context;
 using MyImage.Models;
@@ -12,12 +13,14 @@ namespace MyImage.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IWebHostEnvironment _env;
         private DB_context database;
-        public HomeController(ILogger<HomeController> logger, DB_context data)
+        public HomeController(ILogger<HomeController> logger, DB_context data, IWebHostEnvironment env)
         {
-            
+            _env = env;
             this.database = data;
             _logger = logger;
+            _env = env;
         }
         public IActionResult LogIn()
         {
@@ -45,6 +48,7 @@ namespace MyImage.Controllers
                 HttpContext.Session.SetString("session_email", user_details[0].p_number.ToString());
                 HttpContext.Session.SetString("session_email", user_details[0].addres.ToString());
                 HttpContext.Session.SetString("session_email", user_details[0].e_mail.ToString());
+                HttpContext.Session.SetString("profile", user_details[0].Profile_photo.ToString());
 
                 Class_session.user_id = user_details[0].costumer_id.ToString();
                 Class_session.user_fname = user_details[0].f_name.ToString();
@@ -54,6 +58,7 @@ namespace MyImage.Controllers
                 Class_session.number = user_details[0].p_number.ToString();
                 Class_session.adders = user_details[0].addres.ToString();
                 Class_session.user_email = user_details[0].e_mail.ToString();
+                Class_session.image = user_details[0].Profile_photo.ToString();
                 return Content("Loged In");
             }
             else 
@@ -131,51 +136,89 @@ namespace MyImage.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult edit_pro() 
+        public IActionResult edit_pro(IFormFile File) 
         {
-            var FirstName = Request.Form["fname"].ToString();
-            var LastName = Request.Form["lname"].ToString();
-            var PhoneNumber = Request.Form["num"].ToString();
-            var Adress = Request.Form["adress"].ToString();
-            var BD = Request.Form["dob"].ToString();
-            var Gander = Request.Form["gander"].ToString();
-            
-           var user = database.user_tables.FirstOrDefault(x => x.e_mail ==  Class_session.user_email);
-            if (user != null) 
-            {
-                user.f_name = FirstName;
-                user.l_name = LastName;
-                user.p_number = Int64.Parse(PhoneNumber);
-                user.addres = Adress;
-                user.dob = BD;
-                user.gander = Gander;
+           
 
-                database.Update(user);
+                var FirstName = Request.Form["fname"].ToString();
+                var LastName = Request.Form["lname"].ToString();
+                var PhoneNumber = Request.Form["num"].ToString();
+                var Adress = Request.Form["adress"].ToString();
+                var BD = Request.Form["dob"].ToString();
+                var Gander = Request.Form["gander"].ToString();
+
+
+                
+            if (File != null)
+            {
+                string filename = Path.Combine(DateTime.Now.ToString("MMddhhmmss") + File.FileName);
+                string filepath = Path.Combine("wwwroot/img/UploadedImages/", filename);
+
+
+                var userw = database.user_tables.FirstOrDefault(x => x.e_mail == Class_session.user_email);
+                if (userw != null)
+                {
+                    userw.f_name = FirstName;
+                    userw.l_name = LastName;
+                    userw.p_number = Int64.Parse(PhoneNumber);
+                    userw.addres = Adress;
+                    userw.dob = BD;
+                    userw.gander = Gander;
+                    userw.Profile_photo = "~/img/UploadedImages/" + filename;
+                    database.Update(userw);
+                }
+
+                Class_session.image = "~/img/UploadedImages/" + filename;
+
+                using (var strem = new FileStream(filepath, FileMode.Create))
+                {
+                    File.CopyTo(strem);
+                }
             }
+            else
+            {
+                var user = database.user_tables.FirstOrDefault(x => x.e_mail == Class_session.user_email);
+                if (user != null)
+                {
+                    user.f_name = FirstName;
+                    user.l_name = LastName;
+                    user.p_number = Int64.Parse(PhoneNumber);
+                    user.addres = Adress;
+                    user.dob = BD;
+                    user.Profile_photo = "";
+                    user.gander = Gander;
+                    database.Update(user);
+                }
+            }
+
+
+
+
 
             var account = database.Accounts.FirstOrDefault(x => x.e_mail == Class_session.user_email);
-            if (account != null)
-            {
-                account.first_name = FirstName;
-                account.last_name = LastName;
+                if (account != null)
+                {
+                    account.first_name = FirstName;
+                    account.last_name = LastName;
 
-                database.Update(account);
-            }
+                    database.Update(account);
+                }
 
-            Class_session.user_fname = FirstName;
-            Class_session.user_lname = LastName;
-            Class_session.number = PhoneNumber;
-            Class_session.adders = Adress;
-            Class_session.dateOB = BD;
-            Class_session.gander = Gander;
+                Class_session.user_fname = FirstName;
+                Class_session.user_lname = LastName;
+                Class_session.number = PhoneNumber;
+                Class_session.adders = Adress;
+                Class_session.dateOB = BD;
+                Class_session.gander = Gander;
 
 
-            
-            database.SaveChanges();
 
-            
-            return RedirectToAction(nameof(Index));
-        
+                database.SaveChanges();
+
+
+                return RedirectToAction(nameof(Index));
+
+
         }
         public IActionResult Index()
         {

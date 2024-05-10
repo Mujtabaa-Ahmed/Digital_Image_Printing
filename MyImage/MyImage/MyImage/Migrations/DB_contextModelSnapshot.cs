@@ -58,6 +58,10 @@ namespace MyImage.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("costumer_id"), 1L, 1);
 
+                    b.Property<string>("Profile_photo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("addres")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

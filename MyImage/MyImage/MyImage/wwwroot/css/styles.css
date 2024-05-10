@@ -605,8 +605,8 @@ progress {
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
-  border: 1px solid var(--bs-border-color);
-  border-radius: 0.375rem;
+  border: 5px solid var(--bs-border-color);
+  border-radius: 100%;
   max-width: 100%;
   height: auto;
 }
