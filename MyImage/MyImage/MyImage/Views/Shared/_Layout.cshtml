@@ -118,7 +118,7 @@
                                                         @if (sitem.cat_id == item.cat_id)
                                                         {
                                                             <li class="nav-item">
-                                                                <a href="#" class="nav-link">@sitem.subCat_name</a>
+                                                                <a asp-controller="Home" asp-action="product" asp-route-id="@sitem.subCat_id" class="nav-link">@sitem.subCat_name</a>
                                                             </li>
                                                         }
                                                     }
@@ -128,21 +128,9 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a asp-controller="Home" asp-action="blogs" class="nav-link">
                                     Blog
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="blog.html" class="nav-link">
-                                            Blog
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="blog-details.html" class="nav-link">
-                                            Blog Details
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                                 <li class="nav-item">
                                     <a asp-controller="Home" asp-action="About" class="nav-link">

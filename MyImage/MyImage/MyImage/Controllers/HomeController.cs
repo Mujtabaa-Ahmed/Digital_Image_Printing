@@ -122,7 +122,6 @@ namespace MyImage.Controllers
 
 
                 database.Add(signups);
-                database.SaveChanges();
                 database.Add(user);
                 database.SaveChanges();
                 return Content("");
@@ -224,6 +223,17 @@ namespace MyImage.Controllers
 
         }
         public IActionResult Index()
+        {
+            
+            return View(dataset);
+        }
+        
+        public IActionResult product(int? id)
+        { 
+
+            return View(dataset);
+        }
+        public IActionResult blogs() 
         {
             return View(dataset);
         }
