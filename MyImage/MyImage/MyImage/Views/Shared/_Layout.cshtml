@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿@model MyImage.Models.class_listModels;
+<!doctype html>
 <html lang="zxx">
 
 <head>
@@ -74,11 +75,12 @@
 
         <div class="main-nav">
             <div class="container">
+                   
                 <nav class="navbar navbar-expand-md navbar-light ">
                         <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                             <img src="~/img/logo.png" class="logo-one" alt="Logo">
                             <img src="~/img/footer-logo.png" class="logo-two" alt="Logo">
-                    </a>
+                        </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav m-auto align-items-center">
                             <li class="nav-item">
@@ -88,145 +90,46 @@
                                  
                             </li>
                             
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    Pages
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <ul class="dropdown-menu">
+                         
+                                @foreach (var menue in Model.SubCategeoriesForMenue)
+                                {
                                     <li class="nav-item">
-                                        <a href="pricing.html" class="nav-link">
-                                            Pricing
+                                        <a href="#" class="nav-link text-nowrap">
+                                            @menue.subCat_name
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="faq.html" class="nav-link">
-                                            FAQ
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="designer.html" class="nav-link">
-                                            Designer
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="testimonials.html" class="nav-link">
-                                            Testimonials
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="404.html" class="nav-link">
-                                            404 page
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="sign-in.html" class="nav-link">
-                                            Sign In
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="sign-up.html" class="nav-link">
-                                            Sign Up
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="recover-password.html" class="nav-link">Recover Password</a>
-                                    </li>
-                                    <li class="nav-item"
-                                        <a href="terms-condition.html" class="nav-link">
-                                            Terms & Conditions
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                            <a asp-controller="Home" asp-action="Privacy" class="nav-link">
-                                            Privacy Policy
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="coming-soon.html" class="nav-link">
-                                            Coming Soon
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Level 1
-                                            <i class="bx bx-plus"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">Level 2</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">Level 2</a>
-                                            </li>
+                                }
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Services
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        @foreach (var item in Model.categeories)
+                                        {
                                             <li class="nav-item">
                                                 <a href="#" class="nav-link">
-                                                    Level 2
+                                                    @item.cat_name
                                                     <i class="bx bx-plus"></i>
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">Level 3</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">Level 3</a>
-                                                    </li>
+                                                    @foreach (var sitem in Model.SubCategeories)
+                                                    {
+                                                        @if (sitem.cat_id == item.cat_id)
+                                                        {
+                                                            <li class="nav-item">
+                                                                <a href="#" class="nav-link">@sitem.subCat_name</a>
+                                                            </li>
+                                                        }
+                                                    }
                                                 </ul>
                                             </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    Services
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="services.html" class="nav-link">
-                                            Services
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="service-details.html" class="nav-link">
-                                            Service Details
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    Product
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="product.html" class="nav-link">
-                                            Product
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="cart.html" class="nav-link">
-                                            Cart
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="checkout.html" class="nav-link">
-                                            Checkout
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="product-details.html" class="nav-link">
-                                            Product Details
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
+                                        }
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     Blog
-                                    <i class="bx bx-plus"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">

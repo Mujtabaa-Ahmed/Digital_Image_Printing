@@ -11,5 +11,7 @@ namespace MyImage.DB_Context
         }
         public DbSet<class_user_table> user_tables { get; set; }
         public DbSet<class_accounts> Accounts { get; set; }
+        public DbSet<class_categeory> categeories { get; set; }
+        public DbSet<class_subCategeory> subCategeories { get; set; }
     }
 }

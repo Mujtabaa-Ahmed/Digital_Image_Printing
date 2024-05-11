@@ -13,18 +13,20 @@ namespace MyImage.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IWebHostEnvironment _env;
         private DB_context database;
-        public HomeController(ILogger<HomeController> logger, DB_context data, IWebHostEnvironment env)
+        public class_listModels dataset = new class_listModels();
+        public HomeController(ILogger<HomeController> logger, DB_context data)
         {
-            _env = env;
             this.database = data;
             _logger = logger;
-            _env = env;
+            dataset.categeories = database.categeories.ToList();
+            dataset.SubCategeories = database.subCategeories.ToList();
+            dataset.SubCategeoriesForMenue = database.subCategeories.Where(a => a.subCat_status == 1).ToList();
+
         }
         public IActionResult LogIn()
         {
-            return View();
+            return View(dataset);
         }
         [HttpPost]
         public IActionResult Logining()
@@ -78,7 +80,7 @@ namespace MyImage.Controllers
         }
         public IActionResult SignUp()
         {
-            return View();
+            return View(dataset);
         }
         [HttpPost]
         public IActionResult signingup() 
@@ -114,7 +116,8 @@ namespace MyImage.Controllers
                     dob = "-",
                     gander = "-",
                     p_number = 00000,
-                    e_mail = e_mail
+                    e_mail = e_mail,
+                    Profile_photo = ""
                 };
 
 
@@ -133,7 +136,7 @@ namespace MyImage.Controllers
         }
         public IActionResult edit_profile() 
         {
-            return View();
+            return View(dataset);
         }
         [HttpPost]
         public IActionResult edit_pro(IFormFile File) 
@@ -222,23 +225,23 @@ namespace MyImage.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            return View(dataset);
         }
         public IActionResult cart()
         {
-            return View();
+            return View(dataset);
         }
         public IActionResult About() 
         {
-            return View();
+            return View(dataset);
         }
         public IActionResult Contact() 
         {
-            return View();
+            return View(dataset);
         }
         public IActionResult Privacy()
         {
-            return View();
+            return View(dataset);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

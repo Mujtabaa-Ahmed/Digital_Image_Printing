@@ -50,6 +50,49 @@ namespace MyImage.Migrations
                     b.ToTable("Accounts");
                 });
 
+            modelBuilder.Entity("MyImage.Models.class_categeory", b =>
+                {
+                    b.Property<int>("cat_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("cat_id"), 1L, 1);
+
+                    b.Property<string>("cat_name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("cat_status")
+                        .HasColumnType("int");
+
+                    b.HasKey("cat_id");
+
+                    b.ToTable("categeories");
+                });
+
+            modelBuilder.Entity("MyImage.Models.class_subCategeory", b =>
+                {
+                    b.Property<int>("subCat_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("subCat_id"), 1L, 1);
+
+                    b.Property<int>("cat_id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("subCat_name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("subCat_status")
+                        .HasColumnType("int");
+
+                    b.HasKey("subCat_id");
+
+                    b.ToTable("subCategeories");
+                });
+
             modelBuilder.Entity("MyImage.Models.class_user_table", b =>
                 {
                     b.Property<int>("costumer_id")
