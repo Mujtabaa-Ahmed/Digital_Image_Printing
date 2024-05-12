@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using MyImage.DB_Context;
 
 namespace MyImage.Controllers
@@ -16,6 +17,18 @@ namespace MyImage.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult add_service() 
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult testing()
+        {
+            string subcat = Request.Form["forsubcat"];
+            string product = Request.Form["forproduct"];
+
+            return Content(subcat, product);
         }
     }
 }
