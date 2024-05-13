@@ -33,6 +33,7 @@ namespace MyImage.Models
         [Required]
         public string e_mail { get; set; }
         [Required]
+        
         public string Profile_photo { get; set; }
 
         [NotMapped]

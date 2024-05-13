@@ -100,7 +100,8 @@ namespace MyImage.Controllers
                     first_name = first_name,
                     last_name = last_name,
                     e_mail = e_mail,
-                    password = password
+                    password = password,
+                    roles_id = 1
                 };
 
 

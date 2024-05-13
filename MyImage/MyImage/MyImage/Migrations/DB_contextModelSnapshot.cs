@@ -70,6 +70,39 @@ namespace MyImage.Migrations
                     b.ToTable("categeories");
                 });
 
+            modelBuilder.Entity("MyImage.Models.class_services", b =>
+                {
+                    b.Property<int>("service_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("service_id"), 1L, 1);
+
+                    b.Property<int>("cat_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("service_cancledprice")
+                        .HasColumnType("int");
+
+                    b.Property<string>("service_description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("service_name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("service_price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("subCat_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("service_id");
+
+                    b.ToTable("services");
+                });
+
             modelBuilder.Entity("MyImage.Models.class_subCategeory", b =>
                 {
                     b.Property<int>("subCat_id")

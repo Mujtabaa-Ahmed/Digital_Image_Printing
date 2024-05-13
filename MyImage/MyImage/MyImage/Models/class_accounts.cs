@@ -14,11 +14,10 @@ namespace MyImage.Models
         public string e_mail { get; set; }
         [Required]
         public string password { get; set; }
+        [Required]
+        public int roles_id { get; set; }
+      
 
-
-        public static class accountData 
-        {
-            public static List<class_accounts> accData = new List<class_accounts>();
-        }
+       
     }
 }
