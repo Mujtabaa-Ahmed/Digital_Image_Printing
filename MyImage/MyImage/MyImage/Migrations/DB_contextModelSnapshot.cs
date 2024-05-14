@@ -45,6 +45,9 @@ namespace MyImage.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("roles_id")
+                        .HasColumnType("int");
+
                     b.HasKey("signin_id");
 
                     b.ToTable("Accounts");
@@ -70,6 +73,45 @@ namespace MyImage.Migrations
                     b.ToTable("categeories");
                 });
 
+            modelBuilder.Entity("MyImage.Models.class_prices", b =>
+                {
+                    b.Property<int>("price_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("price_id"), 1L, 1);
+
+                    b.Property<int>("cancleed_prices")
+                        .HasColumnType("int");
+
+                    b.Property<int>("prices")
+                        .HasColumnType("int");
+
+                    b.Property<int>("service_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("price_id");
+
+                    b.ToTable("prices");
+                });
+
+            modelBuilder.Entity("MyImage.Models.class_roles", b =>
+                {
+                    b.Property<int>("roles_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("roles_id"), 1L, 1);
+
+                    b.Property<string>("roles_name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("roles_id");
+
+                    b.ToTable("roles");
+                });
+
             modelBuilder.Entity("MyImage.Models.class_services", b =>
                 {
                     b.Property<int>("service_id")
@@ -81,19 +123,20 @@ namespace MyImage.Migrations
                     b.Property<int>("cat_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("service_cancledprice")
+                    b.Property<int>("prices")
                         .HasColumnType("int");
 
                     b.Property<string>("service_description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("service_name")
+                    b.Property<string>("service_image")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("service_price")
-                        .HasColumnType("int");
+                    b.Property<string>("service_name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("subCat_id")
                         .HasColumnType("int");

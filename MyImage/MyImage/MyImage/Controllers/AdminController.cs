@@ -40,12 +40,7 @@ namespace MyImage.Controllers
             var getcat = database.subCategeories.FirstOrDefault(a => a.subCat_name == subcat);
             class_services services = new class_services()
             {
-                service_name = product,
-                subCat_id = getcat.subCat_id,
-                cat_id = getcat.cat_id,
-                service_price = 2000,
-                service_cancledprice = 3000,
-                service_description = "asdasdasdasdasdasda",
+                
 
             };
             database.Add(services);

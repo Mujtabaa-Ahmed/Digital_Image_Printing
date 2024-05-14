@@ -1,0 +1,11 @@
+  insert into categeories (cat_name,cat_status)values('Digital Printing',1); 
+  insert into categeories (cat_name,cat_status)values('Designing',1);  
+  insert into categeories (cat_name,cat_status)values('Constom Art',1); 
+  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Image Prinitng',1,1); 
+  insert into subCategeories(subCat_name,cat_id,subCat_status)values('T-shirt Printing',1,1);
+  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Logo Designing',2,0); 
+  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Banner Designing',2,0);
+  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Book Designing',2,0);  
+  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Furry Art',3,0);
+  insert into roles(roles_name)values('User'); 
+  insert into roles(roles_name)values('Admin');

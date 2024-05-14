@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
 using static MyImage.Models.class_accounts;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MyImage.Controllers
 {
@@ -22,6 +23,7 @@ namespace MyImage.Controllers
             dataset.categeories = database.categeories.ToList();
             dataset.SubCategeories = database.subCategeories.ToList();
             dataset.SubCategeoriesForMenue = database.subCategeories.Where(a => a.subCat_status == 1).ToList();
+            dataset.userTable = database.user_tables.Where(a => a.e_mail == Class_session.user_email).ToList();
 
         }
         public IActionResult LogIn()
@@ -149,7 +151,7 @@ namespace MyImage.Controllers
                 var Adress = Request.Form["adress"].ToString();
                 var BD = Request.Form["dob"].ToString();
                 var Gander = Request.Form["gander"].ToString();
-
+                var img = Request.Form["Pimg"].ToString();
 
                 
             if (File != null)
@@ -181,7 +183,18 @@ namespace MyImage.Controllers
             else
             {
                 var user = database.user_tables.FirstOrDefault(x => x.e_mail == Class_session.user_email);
-                if (user != null)
+                if (user.Profile_photo != "")
+                {
+                    user.f_name = FirstName;
+                    user.l_name = LastName;
+                    user.p_number = Int64.Parse(PhoneNumber);
+                    user.addres = Adress;
+                    user.dob = BD;
+                    user.Profile_photo = img;
+                    user.gander = Gander;
+                    database.Update(user);
+                }
+                else 
                 {
                     user.f_name = FirstName;
                     user.l_name = LastName;

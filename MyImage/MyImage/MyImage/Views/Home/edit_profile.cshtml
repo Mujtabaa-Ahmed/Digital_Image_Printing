@@ -2,8 +2,11 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+@model MyImage.Models.class_listModels;
+
 }
-@model MyImage.Models.class_user_table;
+
+
 <!-- Modal -->
 <div class=" mb-5" id="exampleModal">
     <div class="modal-dialog modal-lg" role="document">
@@ -11,32 +14,34 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Edit Your Information</h5>
             </div>
-            <form asp-action="edit_pro" method="post" enctype="multipart/form-data">
+            @foreach (var value in Model.userTable)
+            {
+             <form asp-action="edit_pro" method="post" enctype="multipart/form-data">
             <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-6 col-sm-12 mb-3">
-                            <input type="text" asp-for="f_name" name="fname" class="form-control" placeholder="First name">
+                            <input type="text" asp-for="@value.f_name" name="fname" class="form-control" placeholder="First name">
                         </div>
                         <div class="col-lg-6 col-sm-12 mb-3">
-                            <input type="text" asp-for="l_name" name="lname" class="form-control" placeholder="Last name">
+                            <input type="text" asp-for="@value.l_name" name="lname" class="form-control" placeholder="Last name">
                         </div>
                     </div>
 
                     <div class="row ">
                         <div class="col-lg-6 col-sm-12 mb-3">
-                            <input type="number" asp-for="p_number" name="num" class="form-control" placeholder="Phone Number">
+                                <input type="number" asp-for="@value.p_number" name="num" class="form-control" placeholder="Phone Number">
                         </div>
                     </div>
                     <div class="form-group mb-3">
-                        <input type="text" asp-for="addres" name="adress" class="form-control" id="inputAddress" placeholder="1234 Main St... Address">
+                            <input type="text" asp-for="@value.addres" name="adress" class="form-control" id="inputAddress" placeholder="1234 Main St... Address">
                     </div>
                    
                     <div class="row">
                         <div class="col-lg-8 col-sm-12 mb-3">
-                            <input type="date" asp-for="dob" name="dob" class="form-control" placeholder="Date Of Birth">
+                                <input type="date" asp-for="@value.dob" name="dob" class="form-control" placeholder="Date Of Birth">
                         </div>
                         <div class="col-lg-4 col-sm-12 mb-3">
-                            <select name="gander" asp-for="gander" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <select name="gander" asp-for="@value.gander" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                 <option selected>Gander...</option>
                                 <option value="Male">Male</option>
                                 <option value="Femail">Female</option>
@@ -46,15 +51,18 @@
                     </div>
                     
                     <div class="form-group mb-3">
-                        <input type="file" asp-for="File" name="File" class="form-control" id="inputAddress" placeholder="1234 Main St... Address">
+                            <input type="file" asp-for="@value.File" name="File" class="form-control"  placeholder="">
+                            <input type="hidden" asp-for="@value.Profile_photo" name="Pimg">
                         <span class="text-success">To privent UI bugs image ration has to be 1:1</span>
                     </div>
                    
             </div>
             <div class="modal-footer">
                     <button type="submit" class=" logout-btn">Save changes</button>
-            </form>
-            </div>
+            </form>    
+            
+            }
+        </div>
         </div>
     </div>
 </div>
