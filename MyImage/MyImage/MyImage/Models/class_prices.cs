@@ -8,6 +8,8 @@ namespace MyImage.Models
         public int price_id { get; set; }
         public int prices { get; set; }
         public int cancleed_prices { get; set; }
+        public int size_id { get; set; }
+        public string material { get; set; }
         public int service_id { get; set; }
     }
 }

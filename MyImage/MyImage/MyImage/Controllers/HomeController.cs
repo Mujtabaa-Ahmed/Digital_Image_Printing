@@ -242,8 +242,10 @@ namespace MyImage.Controllers
             return View(dataset);
         }
         
-        public IActionResult product(int? id)
-        { 
+        public IActionResult product(int? subId)
+        {
+            List<class_services> servic = new List<class_services>();
+
 
             return View(dataset);
         }

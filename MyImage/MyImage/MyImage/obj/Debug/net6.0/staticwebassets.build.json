@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VevRFAl2xBOmwR1Thbl2aAAfWX9gf4rSJ1GepHtzZSg=",
+  "Hash": "3033ZtaFFWOcOrqiAZq9BWbgjWpijlTn2Z+8dXJ9gl0=",
   "Source": "MyImage",
   "BasePath": "_content/MyImage",
   "Mode": "Default",
@@ -2333,6 +2333,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\UploadedImages\\0514082821e4.jpg"
+    },
+    {
+      "Identity": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\UploadedImages\\0514085327187950159_168029361992076_2725177630152761380_n.jpg",
+      "SourceId": "MyImage",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\wwwroot\\",
+      "BasePath": "_content/MyImage",
+      "RelativePath": "img/UploadedImages/0514085327187950159_168029361992076_2725177630152761380_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\UploadedImages\\0514085327187950159_168029361992076_2725177630152761380_n.jpg"
     },
     {
       "Identity": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\user.png",

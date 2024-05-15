@@ -84,10 +84,17 @@ namespace MyImage.Migrations
                     b.Property<int>("cancleed_prices")
                         .HasColumnType("int");
 
+                    b.Property<string>("material")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("prices")
                         .HasColumnType("int");
 
                     b.Property<int>("service_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("size_id")
                         .HasColumnType("int");
 
                     b.HasKey("price_id");
@@ -144,6 +151,23 @@ namespace MyImage.Migrations
                     b.HasKey("service_id");
 
                     b.ToTable("services");
+                });
+
+            modelBuilder.Entity("MyImage.Models.class_sizes", b =>
+                {
+                    b.Property<int>("size_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("size_id"), 1L, 1);
+
+                    b.Property<string>("size")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("size_id");
+
+                    b.ToTable("sizes");
                 });
 
             modelBuilder.Entity("MyImage.Models.class_subCategeory", b =>
