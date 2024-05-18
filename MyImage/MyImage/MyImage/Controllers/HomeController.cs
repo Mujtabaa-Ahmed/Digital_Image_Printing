@@ -24,7 +24,8 @@ namespace MyImage.Controllers
             dataset.SubCategeories = database.subCategeories.ToList();
             dataset.SubCategeoriesForMenue = database.subCategeories.Where(a => a.subCat_status == 1).ToList();
             dataset.userTable = database.user_tables.Where(a => a.e_mail == Class_session.user_email).ToList();
-
+            dataset.price = database.prices.ToList();
+            dataset.size = database.sizes.ToList();
         }
         public IActionResult LogIn()
         {
@@ -238,15 +239,13 @@ namespace MyImage.Controllers
         }
         public IActionResult Index()
         {
-            
             return View(dataset);
         }
-        
-        public IActionResult product(int? subId)
+        [HttpGet]
+        public IActionResult product(string subcat)
         {
-            List<class_services> servic = new List<class_services>();
-
-
+            List<class_services> serv = database.services.Where(a => a.subCat_id == int.Parse(subcat)).ToList();
+            dataset.service = serv;
             return View(dataset);
         }
         public IActionResult blogs() 

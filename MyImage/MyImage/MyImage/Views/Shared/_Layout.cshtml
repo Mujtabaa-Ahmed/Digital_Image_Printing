@@ -118,7 +118,7 @@
                                                         @if (sitem.cat_id == item.cat_id)
                                                         {
                                                             <li class="nav-item">
-                                                                <a asp-controller="Home" asp-action="product" asp-route-id="@sitem.subCat_id" class="nav-link">@sitem.subCat_name</a>
+                                                                <a href="Home/product?subcat=@sitem.subCat_id.ToString()" class="nav-link">@sitem.subCat_name</a>
                                                             </li>
                                                         }
                                                     }

@@ -91,9 +91,6 @@ namespace MyImage.Migrations
                     b.Property<int>("prices")
                         .HasColumnType("int");
 
-                    b.Property<int>("service_id")
-                        .HasColumnType("int");
-
                     b.Property<int>("size_id")
                         .HasColumnType("int");
 
@@ -130,9 +127,6 @@ namespace MyImage.Migrations
                     b.Property<int>("cat_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("prices")
-                        .HasColumnType("int");
-
                     b.Property<string>("service_description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -160,6 +154,9 @@ namespace MyImage.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("size_id"), 1L, 1);
+
+                    b.Property<int>("service_id")
+                        .HasColumnType("int");
 
                     b.Property<string>("size")
                         .IsRequired()

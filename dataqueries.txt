@@ -1,19 +1,20 @@
-insert into categeories (cat_name,cat_status)values('Digital Printing',1); 
+  insert into categeories (cat_name,cat_status)values('Digital Printing',1); 
   insert into categeories (cat_name,cat_status)values('Designing',1);  
   insert into categeories (cat_name,cat_status)values('Constom Art',1); 
-  insert into subCategeories(subCat_name,cat_id,subCat_status)values('image printing 2',1,0); 
-  insert into subCategeories(subCat_name,cat_id,subCat_status)values('T-shirt Printing',1,1);
-  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Logo Designing',2,0); 
-  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Banner Designing',2,0);
-  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Book Designing',2,0);  
-  insert into subCategeories(subCat_name,cat_id,subCat_status)values('Furry Art',3,0);
+
+  insert into subCategeories(subCat_name,cat_id,subCat_status)values('image printing',1,1); 
+  
+  insert into sizes(size,service_id)values('4x6',1);
+  insert into sizes(size,service_id)values('5x7',1);
+  insert into sizes(size,service_id)values('8x10',1);	
+  insert into sizes(size,service_id)values('8.5x11',1);
+
+  insert into prices(prices,cancleed_prices,material,size_id)values(10,20,'glosy',1);
+  insert into prices(prices,cancleed_prices,material,size_id)values(30,40,'glosy',2);
+  insert into prices(prices,cancleed_prices,material,size_id)values(50,60,'glosy',3);
+  insert into prices(prices,cancleed_prices,material,size_id)values(70,80,'glosy',4);  
+
+  insert into services(service_name,service_description,cat_id,subCat_id)values('image printing','ghchcedgcgcyfhgvkuttyfiikufhgkj',1,1);
+  
   insert into roles(roles_name)values('User'); 
-  insert into sizes(size)values('4x6');
-  insert into sizes(size)values('5x7');
-  insert into sizes(size)values('8x10');
-  insert into sizes(size)values('8.5x11');
-  insert into prices(prices,cancleed_prices,service_id,material,size_id)values(10,20,1,'glosy',1);
-  insert into prices(prices,cancleed_prices,service_id,material,size_id)values(30,40,1,'glosy',2);
-  insert into prices(prices,cancleed_prices,service_id,material,size_id)values(50,60,1,'glosy',3);
-  insert into prices(prices,cancleed_prices,service_id,material,size_id)values(70,80,1,'glosy',4);  
-  insert into services(service_name,service_description,cat_id,subCat_id,prices)values('image printing 2','ghchcedgcgcyfhgvkuttyfiikufhgkj',1,7,1);
+  insert into roles(roles_name)values('Admin'); 

@@ -7,7 +7,6 @@ namespace MyImage.Models
         [Key]
         public int service_id { get; set; }
         public string service_name { get; set; }
-        public int prices { get; set; }
         public string service_image { get; set; }
         public string service_description { get; set; }
         public int cat_id { get; set; }
