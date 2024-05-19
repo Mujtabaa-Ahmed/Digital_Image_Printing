@@ -94,7 +94,7 @@
                                 @foreach (var menue in Model.SubCategeoriesForMenue)
                                 {
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link text-nowrap">
+                                        <a href="Home/product?subcat=@menue.subCat_id.ToString()" class="nav-link text-nowrap">
                                             @menue.subCat_name
                                         </a>
                                     </li>

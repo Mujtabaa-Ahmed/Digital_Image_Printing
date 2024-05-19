@@ -9,5 +9,6 @@
         public  List<class_services> service { get; set; }
         public  List<class_prices> price { get; set; }
         public List<class_sizes> size { get; set; }
+        public string gg { get; set; }
     }
 }

@@ -244,9 +244,31 @@ namespace MyImage.Controllers
         [HttpGet]
         public IActionResult product(string subcat)
         {
-            List<class_services> serv = database.services.Where(a => a.subCat_id == int.Parse(subcat)).ToList();
+            
+            
+            var serv = database.services.Where(a => a.subCat_id == int.Parse(subcat)).ToList();
+            
             dataset.service = serv;
+            ViewBag.subcat = subcat;
             return View(dataset);
+            
+            
+        }
+        public IActionResult size(string sizzz) 
+        {
+            if (sizzz != null)
+            {
+                var size = database.sizes.Where(a => a.size_id == int.Parse(sizzz)).ToList();
+                var sizservice = database.services.Where(a => a.service_id == size[0].service_id).ToList();
+
+                dataset.service = sizservice;
+                dataset.gg = sizzz;
+                return Content(sizzz);
+            }
+            else 
+            {
+                return RedirectToAction(nameof(product));
+            }
         }
         public IActionResult blogs() 
         {
