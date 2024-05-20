@@ -291,12 +291,13 @@ namespace MyImage.Controllers
             {
                 string filename = Path.Combine(DateTime.Now.ToString("MMddhhmmss") +"uploaded_image"+ image_for_printing.FileName);
                 string filepath = Path.Combine("wwwroot/img/cart/", filename);
+                string file = Path.GetFileNameWithoutExtension(filename);
 
-               
 
-                
 
-                    
+
+
+
                    class_cart cart_item = new class_cart()
                    {
                         service_id = a.service_id,
@@ -304,7 +305,8 @@ namespace MyImage.Controllers
                        service_price = a.service_price,
                        service_size = a.service_size,
                        service_quantity = a.service_quantity.ToString(),
-                        image_stored = filename
+                        image_stored = filename,
+                        cart_id = file
                     };
                     list.carts.Add(cart_item);
                 
@@ -322,6 +324,37 @@ namespace MyImage.Controllers
             else { return Content("not moved"); }
             
             //return RedirectToAction("product","Home",new { subcat = a.service_id});
+        }
+        [HttpPost]
+        public IActionResult update_cart()
+        {
+            var qty = Request.Form["quantity"].FirstOrDefault();
+            var id = Request.Form["item_id"].FirstOrDefault();
+
+            var model = list.carts.FirstOrDefault(a => a.cart_id == id);
+
+            if (model != null) 
+            {
+                model.service_quantity = qty;
+            }
+            return Content("updated");
+        }
+        public IActionResult delete_cart(string id) 
+        {
+            var deleting = list.carts.FirstOrDefault(a => a.cart_id == id);
+
+            if (deleting != null)
+            {
+
+                string dfile = "wwwroot/img/cart/";
+                string file = deleting.image_stored;
+
+                System.IO.File.Delete(dfile + file);
+                list.carts.Remove(deleting);
+
+            }
+
+            return RedirectToAction("cart","Home", dataset);
         }
         public IActionResult About() 
         {

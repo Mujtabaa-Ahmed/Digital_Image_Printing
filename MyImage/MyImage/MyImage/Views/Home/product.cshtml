@@ -93,7 +93,7 @@
                        
                     
                     
-                    <form asp-action="add_cart" method="post" enctype="multipart/form-data">
+                    <form asp-controller="Home" asp-action="add_cart" method="post" enctype="multipart/form-data">
                         <fieldset>
                             <input type="hidden" asp-for="@Model.cart[0].service_id" name="service_id" value="@Model.service[0].service_id.ToString()" />
                             <input type="hidden" asp-for="@Model.cart[0].service_name" name="service_name" value="@Model.service[0].service_name" />
@@ -114,10 +114,10 @@
                                     <input type="hidden" asp-for="@Model.cart[0].service_price" name="service_price" value="@pric.ToString()" />
                                 }
                                 <input type="hidden" asp-for="@Model.cart[0].service_quantity" name="service_quantity" value="1" />
-                                <input type="file" asp-for="@Model.cart[0].image_for_printing" name="image_for_printing" />
+                                <input type="file" asp-for="@Model.cart[0].image_for_printing" name="image_for_printing" required/>
                           
                         </fieldset>
-                        <button type="submit" class="default-btn mt-3">
+                        <button type="submit" class="default-btn mt-3" >
                             <i class="fas fa-cart-plus"></i> Add To Cart
                         </button>
 

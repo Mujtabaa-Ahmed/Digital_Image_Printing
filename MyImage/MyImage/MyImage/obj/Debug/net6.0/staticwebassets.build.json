@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Os3gN50AyYB7wXONOUd9bgD9mOHlej6l6ir++mMAqQ0=",
+  "Hash": "BIo6N28uH74kmUmitJrSKRSe53fodTa2sZCqZENGFqE=",
   "Source": "MyImage",
   "BasePath": "_content/MyImage",
   "Mode": "Default",
@@ -813,25 +813,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\blog\\blog-dtls.jpg"
-    },
-    {
-      "Identity": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\cart\\0520041217uploaded_imageAhmed Mujtaba.png",
-      "SourceId": "MyImage",
-      "SourceType": "Discovered",
-      "ContentRoot": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\wwwroot\\",
-      "BasePath": "_content/MyImage",
-      "RelativePath": "img/cart/0520041217uploaded_imageAhmed Mujtaba.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\cart\\0520041217uploaded_imageAhmed Mujtaba.png"
     },
     {
       "Identity": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\wwwroot\\img\\designer\\1.jpg",
