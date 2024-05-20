@@ -42,35 +42,37 @@ namespace MyImage.Controllers
             List<class_user_table> user_details = database.user_tables.Where(a => a.e_mail == email).ToList();
             List<class_accounts> user = database.Accounts.Where(a => a.e_mail == email && a.password == password).ToList();
 
+           
+                if (user.Count != 0)
+                {
 
-            if (user.Count != 0)
-            {
-                
-                HttpContext.Session.SetString("session_Id", user_details[0].costumer_id.ToString());
-                HttpContext.Session.SetString("session_first_name", user_details[0].f_name.ToString());
-                HttpContext.Session.SetString("session_last_name", user_details[0].l_name.ToString());
-                HttpContext.Session.SetString("session_email", user_details[0].gander.ToString());
-                HttpContext.Session.SetString("session_email", user_details[0].dob.ToString());
-                HttpContext.Session.SetString("session_email", user_details[0].p_number.ToString());
-                HttpContext.Session.SetString("session_email", user_details[0].addres.ToString());
-                HttpContext.Session.SetString("session_email", user_details[0].e_mail.ToString());
-                HttpContext.Session.SetString("profile", user_details[0].Profile_photo.ToString());
+                    HttpContext.Session.SetString("session_Id", user_details[0].costumer_id.ToString());
+                    HttpContext.Session.SetString("session_first_name", user_details[0].f_name.ToString());
+                    HttpContext.Session.SetString("session_last_name", user_details[0].l_name.ToString());
+                    HttpContext.Session.SetString("session_email", user_details[0].gander.ToString());
+                    HttpContext.Session.SetString("session_email", user_details[0].dob.ToString());
+                    HttpContext.Session.SetString("session_email", user_details[0].p_number.ToString());
+                    HttpContext.Session.SetString("session_email", user_details[0].addres.ToString());
+                    HttpContext.Session.SetString("session_email", user_details[0].e_mail.ToString());
+                    HttpContext.Session.SetString("profile", user_details[0].Profile_photo.ToString());
 
-                Class_session.user_id = user_details[0].costumer_id.ToString();
-                Class_session.user_fname = user_details[0].f_name.ToString();
-                Class_session.user_lname = user_details[0].l_name.ToString();
-                Class_session.gander = user_details[0].gander.ToString();
-                Class_session.dateOB = user_details[0].dob.ToString();
-                Class_session.number = user_details[0].p_number.ToString();
-                Class_session.adders = user_details[0].addres.ToString();
-                Class_session.user_email = user_details[0].e_mail.ToString();
-                Class_session.image = user_details[0].Profile_photo.ToString();
-                return Content("Loged In");
-            }
-            else 
-            {
-                return Content("E-mail or Password is incorrect");
-            }
+                    Class_session.user_id = user_details[0].costumer_id.ToString();
+                    Class_session.user_fname = user_details[0].f_name.ToString();
+                    Class_session.user_lname = user_details[0].l_name.ToString();
+                    Class_session.gander = user_details[0].gander.ToString();
+                    Class_session.dateOB = user_details[0].dob.ToString();
+                    Class_session.number = user_details[0].p_number.ToString();
+                    Class_session.adders = user_details[0].addres.ToString();
+                    Class_session.user_email = user_details[0].e_mail.ToString();
+                    Class_session.image = user_details[0].Profile_photo.ToString();
+                    return Content("Loged In");
+                }
+                else
+                {
+                    return Content("E-mail or Password is incorrect");
+                }
+         
+            
         }
         public IActionResult logout() 
         {

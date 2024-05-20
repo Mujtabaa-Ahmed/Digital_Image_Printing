@@ -4,11 +4,64 @@
 @{
     Layout = "__layout";
 }
-<form asp-controller="Admin" asp-action="testing" method="post" class="mt-5">
-    <input type="text" name="forsubcat" />
-    <input type="text" name="forproduct" value="" />
-    <button type="submit">add</button>
-</form>
+@model MyImage.Models.class_categeory;
+
+<div class="container mt-5">
+    <form asp-controller="Admin" asp-action="add__" method="post">
+        <h1 class="display-1 text-center mt-5">Add Servicer</h1>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Service Name</label>
+                <input type="text" name="service_name" class="form-control" id="inputEmail4" placeholder="Service Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Service Description</label>
+                <textarea class="form-control" name="dess" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Set Categeory</label>
+                <select class="form-control" name="cate">
+
+                    <option value="">Select Categeory</option>
+
+                @foreach (var cat in ViewBag.cate)
+                {
+                        <option value="@cat.cat_id">@cat.cat_name</option>
+                }
+                </select>
+            </div>
+        </div>
+        <div class="col row">
+        <div class="form-group col-md-2">
+            <label for="inputZip">Size 1</label>
+            <input type="text" class="form-control mb-1" name="size" id="inputZip" placeholder="Add Size">
+                <input type="text" class="form-control" name="price1" id="inputZip" placeholder="Add Price">
+            <input type="text" class="form-control" name="cprice1" id="inputZip" placeholder="Add cancled">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip">Size 2</label>
+                <input type="text" class="form-control mb-1" name="size1" id="inputZip" placeholder="Add Size">
+            <input type="text" class="form-control" name="price2" id="inputZip" placeholder="Add Price">
+                <input type="text" class="form-control" name="cprice2" id="inputZip" placeholder="Add cancled">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip">Size 3</label>
+                <input type="text" class="form-control mb-1" name="size2" id="inputZip" placeholder="Add Size">
+                <input type="text" class="form-control" name="price3" id="inputZip" placeholder="Add Price">
+                <input type="text" class="form-control" name="cprice3" id="inputZip" placeholder="Add cancled">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip">Size 4</label>
+                <input type="text" class="form-control mb-1" name="size3" id="inputZip" placeholder="Add Size">
+                <input type="text" class="form-control" name="price4" id="inputZip" placeholder="Add Price">
+                <input type="text" class="form-control" name="cprice4" id="inputZip" placeholder="Add cancled">
+        </div>
+        </div>
+
+
+        <div class="text-center"><button type="submit" class="btn btn-primary mt-5">Add Service</button></div>
+    </form>
+</div>
 
 
 

@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "__Layout";
+}
+@model MyImage.Models.class_categeory;
+<div class="container">
+    <div class="container-fluid col-lg-6 col-md-10 col-sm-12">
+        <h1>Add Categeory</h1>
+        <hr>
+    </div>
+    <div class="container-fluid col-lg-8 col-md-10 col-sm-12">
+        <form asp-action="addingcategeory" asp-controller="Admin">
+            <div class="row">
+                <div class="col">
+                    <input asp-for="cat_name" type="text" class="form-control" placeholder="Add Categeory">
+                </div>
+                <div class="col">
+                    <button type="submit" class="form-control btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="container-fluid col-lg-8 col-md-10 col-sm-12 mt-5">
+        <h1>Categeories</h1>
+        <hr>
+    </div>
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Categeories</th>
+                    <th scope="col">Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var value in ViewBag.categeories)
+                {
+                    <tr>
+                        <th scope="row">@value.cat_id</th>
+                        <td>@value.cat_name</td>
+                        <td><a asp-controller="Admin" asp-route-id="@value.cat_id" asp-action="CDelete"><button class="btn btn-primary btn-sm mx-2">Delete</button></a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

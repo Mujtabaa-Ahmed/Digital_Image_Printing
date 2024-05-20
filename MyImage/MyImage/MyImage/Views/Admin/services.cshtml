@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "__Layout";
+}
+<div class="container">
+    <h1 class="display-1 text-center mt-5">Services</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Service Id</th>
+                <th scope="col">Service</th>
+                <th scope="col">Service Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vlaue in ViewBag.services)
+            {
+                <tr>
+                    <th scope="row">@vlaue.service_id</th>
+                    <td>@vlaue.service_name</td>
+                    <td>@vlaue.service_description</td>
+            </tr> 
+            }
+           
+        </tbody>
+    </table>
+</div>
