@@ -6,21 +6,25 @@
     var pric = Model.price[0].prices;
     var prics = Model.price[0].cancleed_prices;
     var sizz = Model.size[0].size;
+
+    var sleected_size = class_listModels.selected.Ssize;
+    var sleected_price = class_listModels.selected.Sprice;
+    var sleected_cprice = class_listModels.selected.Scprice;
 }
 
  
 <div class="inner-banner inner-bg2">
     <div class="container">
         <div class="inner-title">
-            <h3>Product Details </h3>
+            <h3>@Model.service[0].service_name</h3>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a asp-action="Index" asp-controller="Home">Home</a>
                 </li>
                 <li>
                     <i class="bx bxs-chevrons-right"></i>
                 </li>
-                <li>Product Details </li>
+                <li>@Model.service[0].service_name</li>
             </ul>
         </div>
     </div>
@@ -32,7 +36,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="product-detls-image">
-                    <img src="~/img/products/pro-dtls.jpg" alt="Image">
+                    <img src="~/img/UploadedImages/services_images/photo_print_size_guide.jpg" alt="Image">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
@@ -40,30 +44,27 @@
                     <h3>@Model.service[0].service_name</h3>
 
                     <div class="price">
-                        @if (Model.gg != null)
-                        {
-                            @foreach (var pr in Model.price)
-                            {@if (pr.size_id == int.Parse(Model.gg))
-                                {
-                                    <span class="new-price">$@pr.prices</span>
-                                    <span class="old-price">$@pr.cancleed_prices</span>
-                                }
-                            }
+                        @if (sleected_price != null)
+                                    {
+                            <span class="new-price">$@sleected_price</span>
+                            <span class="old-price">$@sleected_cprice</span>
                         }else
-                                {
+                        {
+                            <span class="new-price">$@pric</span>
+                            <span class="old-price">$@prics</span>
+                        }
+                       
+                            </div>
 
-                                    <span class="new-price">$@pric</span>
-                                    <span class="old-price">$@prics</span>
-                                }
-
-                    </div>
                     <div class="price">
+                        @if (sleected_size != null)
+                        {
+                            <span class="new-price" id="f_size">@sleected_size</span>
+                        }else
+                        {
+                            <span class="new-price" id="f_size">@sizz</span>
+                        }
                         
-                        <span class="new-price" id="f_size">
-                            
-                                        @sizz
-                                   
-                        </span>
                     </div>
                     <div class="product-review">
                         <div class="rating">
@@ -78,24 +79,7 @@
                     <p>
                       @Model.service[0].service_description
                     </p>
-                    <div class="btn-group mr-2 product-add" role="group" aria-label="First group">
-                        @foreach (var siz in Model.size) {@if (siz.service_id == Model.service[0].service_id)
-                            {
-                                <button id="size_@siz.size_id.ToString()" class="default-btn">@siz.size</button>
-                                
-                            }
-                            <script>
-                            $(document).ready(function () {
-                            $("#size_@siz.size_id.ToString()").click(function () {
-                                var size_for_g = $("#size_@siz.size_id.ToString()").html();
-                                $("#f_size").html("@siz.size");
-                                
-
-                            });
-                        })
-                        </script>
-                        }
-                    </div>
+                   
                     
                     @* <div class="input-count-area">
                         <h3>Quantity</h3>
@@ -106,12 +90,68 @@
                         </div>
                     </div> *@
                     <div class="product-add">
-                        <button type="submit" class="default-btn">
-                            <i class="fas fa-cart-plus"></i> Buy Now!
-                        </button>
-                        <button type="submit" class="default-btn">
+                       
+                    
+                    
+                    <form asp-action="add_cart" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <input type="hidden" asp-for="@Model.cart[0].service_id" name="service_id" value="@Model.service[0].service_id.ToString()" />
+                            <input type="hidden" asp-for="@Model.cart[0].service_name" name="service_name" value="@Model.service[0].service_name" />
+                                @if (sleected_size != null)
+                                {
+                                    <input type="hidden" asp-for="@Model.cart[0].service_size" name="service_size" value="@sleected_size.ToString()" />
+                                }
+                                else
+                                {
+                                    <input type="hidden" asp-for="@Model.cart[0].service_size" name="service_size" value="@sizz.ToString()" />
+                                }
+                                @if (sleected_price != null)
+                                {
+                                    <input type="hidden" asp-for="@Model.cart[0].service_price" name="service_price" value="@sleected_price.ToString()" />
+                                }
+                                else
+                                {
+                                    <input type="hidden" asp-for="@Model.cart[0].service_price" name="service_price" value="@pric.ToString()" />
+                                }
+                                <input type="hidden" asp-for="@Model.cart[0].service_quantity" name="service_quantity" value="1" />
+                                <input type="file" asp-for="@Model.cart[0].image_for_printing" name="image_for_printing" />
+                          
+                        </fieldset>
+                        <button type="submit" class="default-btn mt-3">
                             <i class="fas fa-cart-plus"></i> Add To Cart
                         </button>
+
+                        </form>
+                    </div>
+                    <div class="btn-group mr-2 product-add" role="group" aria-label="First group">
+                        @foreach (var siz in Model.size)
+                        {@if (siz.service_id == Model.service[0].service_id)
+                            {
+                                <button id="size_@siz.size_id.ToString()" class="default-btn">@siz.size</button>
+
+                            }
+                            <script>
+                                $(document).ready(function () {
+                                    $("#size_@siz.size_id.ToString()").click(function () {
+                                        var size_for_g = $("#size_@siz.size_id.ToString()").html();
+                                        var selected_data = { "selected_size": size_for_g };
+                                        $.ajax({
+                                            type: "post",
+                                            url: '@Url.Action("size_s", "Home")',
+                                            data: selected_data,
+                                            success: function () {
+                                                location.reload();
+                                            },
+                                            error: function () {
+
+                                            }
+                                        });
+
+
+                                    });
+                                })
+                            </script>
+                        }
                     </div>
                     <div class="product-share">
                         <ul>

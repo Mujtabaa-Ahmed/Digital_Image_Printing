@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
 using static MyImage.Models.class_accounts;
+using static MyImage.Models.class_listModels;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace MyImage.Controllers
@@ -254,21 +255,27 @@ namespace MyImage.Controllers
             
             
         }
-        public IActionResult size(string sizzz) 
+        [HttpPost]
+        public IActionResult size_s()
         {
-            if (sizzz != null)
-            {
-                var size = database.sizes.Where(a => a.size_id == int.Parse(sizzz)).ToList();
-                var sizservice = database.services.Where(a => a.service_id == size[0].service_id).ToList();
+            var selected_size = Request.Form["selected_size"].FirstOrDefault();
 
-                dataset.service = sizservice;
-                dataset.gg = sizzz;
-                return Content(sizzz);
-            }
-            else 
-            {
-                return RedirectToAction(nameof(product));
-            }
+            List<class_sizes> selected_one = database.sizes.Where(a => a.size == selected_size).ToList();
+            selected.Ssize = selected_one[0].size;
+            List<class_prices> selected_one_price = database.prices.Where(a => a.size_id == selected_one[0].size_id).ToList();
+            selected.Sprice = selected_one_price[0].prices.ToString();
+            selected.Scprice = selected_one_price[0].cancleed_prices.ToString();
+
+
+            return Content("gotit");
+        }
+        public IActionResult services() 
+        {
+            return View(dataset);
+        }
+        public IActionResult comming_soon() 
+        {
+            return View(dataset);
         }
         public IActionResult blogs() 
         {
@@ -277,6 +284,44 @@ namespace MyImage.Controllers
         public IActionResult cart()
         {
             return View(dataset);
+        }
+        public IActionResult add_cart(class_cart a,IFormFile image_for_printing) 
+        {
+            if (image_for_printing != null)
+            {
+                string filename = Path.Combine(DateTime.Now.ToString("MMddhhmmss") +"uploaded_image"+ image_for_printing.FileName);
+                string filepath = Path.Combine("wwwroot/img/cart/", filename);
+
+               
+
+                
+
+                    
+                   class_cart cart_item = new class_cart()
+                   {
+                        service_id = a.service_id,
+                      service_name = a.service_name,
+                       service_price = a.service_price,
+                       service_size = a.service_size,
+                       service_quantity = a.service_quantity.ToString(),
+                        image_stored = filename
+                    };
+                    list.carts.Add(cart_item);
+                
+                using (var strem = new FileStream(filepath, FileMode.Create))
+                {
+                    image_for_printing.CopyTo(strem);
+                }
+                return RedirectToAction("product", "Home", new { subcat = a.service_id });
+
+
+
+
+
+            }
+            else { return Content("not moved"); }
+            
+            //return RedirectToAction("product","Home",new { subcat = a.service_id});
         }
         public IActionResult About() 
         {

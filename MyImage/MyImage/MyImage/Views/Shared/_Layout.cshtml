@@ -94,14 +94,14 @@
                                 @foreach (var menue in Model.SubCategeoriesForMenue)
                                 {
                                     <li class="nav-item">
-                                        <a href="Home/product?subcat=@menue.subCat_id.ToString()" class="nav-link text-nowrap">
+                                        <a href="/Home/product?subcat=@menue.subCat_id.ToString()" class="nav-link text-nowrap">
                                             @menue.subCat_name
                                         </a>
                                     </li>
                                 }
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a asp-controller="Home" asp-action="services" class="nav-link">
                                         Services
                                     </a>
                                     <ul class="dropdown-menu">
@@ -118,7 +118,7 @@
                                                         @if (sitem.cat_id == item.cat_id)
                                                         {
                                                             <li class="nav-item">
-                                                                <a href="Home/product?subcat=@sitem.subCat_id.ToString()" class="nav-link">@sitem.subCat_name</a>
+                                                                <a href="/Home/product?subcat=@sitem.subCat_id.ToString()" class="nav-link">@sitem.subCat_name</a>
                                                             </li>
                                                         }
                                                     }
@@ -147,7 +147,7 @@
                                 <div class="cart-area ms-5 ">
                                     <a  asp-controller="Home" asp-action="cart">
                                         <i class="bx bx-cart"></i>
-                                        <span>10</span>
+                                        <span>@list.carts.Count.ToString()</span>
                                     </a>
                                 </div>
 

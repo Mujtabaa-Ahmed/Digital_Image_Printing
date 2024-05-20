@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +15,28 @@
       "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\models\\class_cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\models\\class_cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\views\\home\\edit_profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\edit_profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\models\\class_listmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\models\\class_listmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\models\\class_prices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\models\\class_prices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\views\\home\\comming_soon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\comming_soon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\models\\class_sizes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\models\\class_sizes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|g:\\ahmed\\c#_project\\digital_image_printing\\myimage\\myimage\\myimage\\views\\home\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F27760D6-5ADF-4936-B35F-9573B0B76AFD}|MyImage\\MyImage.csproj|solutionrelative:myimage\\views\\home\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,93 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SignUp.cshtml",
-              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\SignUp.cshtml",
-              "RelativeDocumentMoniker": "MyImage\\Views\\Home\\SignUp.cshtml",
-              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\SignUp.cshtml",
-              "RelativeToolTip": "MyImage\\Views\\Home\\SignUp.cshtml",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAAAGUAAAAsAAAA",
+              "DocumentIndex": 0,
+              "Title": "cart.cshtml",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\cart.cshtml",
+              "RelativeDocumentMoniker": "MyImage\\Views\\Home\\cart.cshtml",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\cart.cshtml",
+              "RelativeToolTip": "MyImage\\Views\\Home\\cart.cshtml",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAkwE0AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-16T19:11:42.052Z",
+              "WhenOpened": "2024-05-19T22:49:28.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "class_sizes.cs",
-              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Models\\class_sizes.cs",
-              "RelativeDocumentMoniker": "MyImage\\Models\\class_sizes.cs",
-              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Models\\class_sizes.cs",
-              "RelativeToolTip": "MyImage\\Models\\class_sizes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T07:35:23.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "class_prices.cs",
-              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Models\\class_prices.cs",
-              "RelativeDocumentMoniker": "MyImage\\Models\\class_prices.cs",
-              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Models\\class_prices.cs",
-              "RelativeToolTip": "MyImage\\Models\\class_prices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T15:35:37.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "class_listModels.cs",
               "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Models\\class_listModels.cs",
               "RelativeDocumentMoniker": "MyImage\\Models\\class_listModels.cs",
               "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Models\\class_listModels.cs",
               "RelativeToolTip": "MyImage\\Models\\class_listModels.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T14:50:34.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "MyImage\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "MyImage\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAQwGEAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-14T14:47:29.33Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "MyImage\\Controllers\\HomeController.cs",
-              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "MyImage\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAPAAAAAAAAAAAAAYwPQAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T18:14:59.441Z",
+              "WhenOpened": "2024-05-19T21:52:16.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "class_cart.cs",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Models\\class_cart.cs",
+              "RelativeDocumentMoniker": "MyImage\\Models\\class_cart.cs",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Models\\class_cart.cs",
+              "RelativeToolTip": "MyImage\\Models\\class_cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T21:44:08.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "edit_profile.cshtml",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\edit_profile.cshtml",
+              "RelativeDocumentMoniker": "MyImage\\Views\\Home\\edit_profile.cshtml",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\edit_profile.cshtml",
+              "RelativeToolTip": "MyImage\\Views\\Home\\edit_profile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-19T21:38:02.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "product.cshtml",
               "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\product.cshtml",
               "RelativeDocumentMoniker": "MyImage\\Views\\Home\\product.cshtml",
               "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\product.cshtml",
               "RelativeToolTip": "MyImage\\Views\\Home\\product.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFwAAAAAAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAiwHMAAAB/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-16T18:37:03.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "comming_soon.cshtml",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\comming_soon.cshtml",
+              "RelativeDocumentMoniker": "MyImage\\Views\\Home\\comming_soon.cshtml",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\comming_soon.cshtml",
+              "RelativeToolTip": "MyImage\\Views\\Home\\comming_soon.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAAAiwDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-19T20:54:12.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "services.cshtml",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\services.cshtml",
+              "RelativeDocumentMoniker": "MyImage\\Views\\Home\\services.cshtml",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Home\\services.cshtml",
+              "RelativeToolTip": "MyImage\\Views\\Home\\services.cshtml",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-19T20:34:26.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MyImage\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MyImage\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAAAJUAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-14T14:47:29.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MyImage\\Controllers\\HomeController.cs",
+              "ToolTip": "G:\\Ahmed\\C#_Project\\Digital_Image_Printing\\MyImage\\MyImage\\MyImage\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MyImage\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAACABAAAAAAAAAAAqwDIBAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T18:14:59.441Z",
               "EditorCaption": ""
             }
           ]

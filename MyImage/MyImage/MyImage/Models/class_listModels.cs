@@ -9,6 +9,14 @@
         public  List<class_services> service { get; set; }
         public  List<class_prices> price { get; set; }
         public List<class_sizes> size { get; set; }
-        public string gg { get; set; }
+        public List<class_cart> cart { get; set; }
+
+        public static class selected
+        {
+            public static string Ssize { get; set; }
+            public static string Sprice { get; set; }
+            public static string Scprice { get; set; }
+
+        }
     }
 }

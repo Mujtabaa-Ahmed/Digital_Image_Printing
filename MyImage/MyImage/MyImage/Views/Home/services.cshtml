@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model MyImage.Models.class_listModels;
+
+
+<div class="inner-banner inner-bg8">
+    <div class="container">
+        <div class="inner-title">
+            <h3>Services</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <i class="bx bxs-chevrons-right"></i>
+                </li>
+                <li>Services</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<section class="service-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title text-center">
+            <span>Services</span>
+            <h2>Pixis Provide Good Quality Printing Services</h2>
+            <p>
+                What indication best sick be project proposal in attempt, train of the showed
+                some a forth. That homeless, won't many of goals thoughts volumes felt.
+            </p>
+        </div>
+        <div class="row pt-45">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <a href="/Home/product?subcat=@Model.SubCategeories[0].subCat_id.ToString()">
+                        <img src="~/img/service/5.jpg" class="w-100" alt="Service Images">
+                    </a>
+                    <div class="service-content">
+                        <a href="services.html"><h3>Digital Printing</h3></a>
+                        <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor incididunt ut labore.</p>
+                        <a href="services.html" class="more-btn">
+                            <i class="bx bx-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <a asp-controller="Home" asp-action="comming_soon">
+                        <img src="~/img/service/1.jpg" alt="Service Images">
+                    </a>
+                    <div class="service-content">
+                        <a asp-controller="Home" asp-action="comming_soon"><h3>Design</h3></a>
+                        <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor incididunt ut labore.</p>
+                        <a asp-controller="Home" asp-action="comming_soon" class="more-btn">
+                            <i class="bx bx-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <a asp-controller="Home" asp-action="comming_soon">
+                        <img src="~/img/service/3.jpg" alt="Service Images">
+                    </a>
+                    <div class="service-content">
+                        <a asp-controller="Home" asp-action="comming_soon"><h3>Costom Art</h3></a>
+                        <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor incididunt ut labore.</p>
+                        <a asp-controller="Home" asp-action="comming_soon" class="more-btn">
+                            <i class="bx bx-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

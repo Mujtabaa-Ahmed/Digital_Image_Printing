@@ -2,6 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    int total = 0;
 }
 <div class="inner-banner inner-bg6">
 <div class="container">
@@ -31,134 +32,68 @@
 <table class="table table-bordered">
 <thead>
 <tr>
-<th scope="col">Product</th>
-<th scope="col">Name</th>
-<th scope="col">Unit Price</th>
+<th scope="col">Priview</th>
+<th scope="col">Service</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Price</th>
 <th scope="col">Quantity</th>
 <th scope="col">Total</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="product-thumbnail">
-<a href="#">
-<img src="assets/img/products/1.jpg" alt="Image">
-</a>
-</td>
-<td class="product-name">
-<a href="#">Package Design</a>
-</td>
-<td class="product-price">
-<span class="unit-amount">$35.00</span>
-</td>
-<td class="product-quantity">
-<div class="input-counter">
-<span class="minus-btn">
-<i class="bx bx-minus"></i>
-</span>
-<input type="text" ="1">
-<span class="plus-btn">
-<i class="bx bx-plus"></i>
-</span>
-</div>
-</td>
-<td class="product-subtotal">
-<span class="subtotal-amount">$35.00</span>
-<a href="#" class="remove">
-<i class="bx bx-trash"></i>
-</a>
-</td>
-</tr>
-<tr>
-<td class="product-thumbnail">
-<a href="#">
-<img src="assets/img/products/2.jpg" alt="Image">
-</a>
-</td>
-<td class="product-name">
-<a href="#">T-shirt Design</a>
-</td>
-<td class="product-price">
-<span class="unit-amount">$30.00</span>
-</td>
-<td class="product-quantity">
-<div class="input-counter">
-<span class="minus-btn">
-<i class="bx bx-minus"></i>
-</span>
-<input type="text" ="1">
-<span class="plus-btn">
-<i class="bx bx-plus"></i>
-</span>
-</div>
-</td>
-<td class="product-subtotal">
-<span class="subtotal-amount">$30.00</span>
-<a href="#" class="remove">
-<i class="bx bx-trash"></i>
-</a>
-</td>
-</tr>
-<tr>
-<td class="product-thumbnail">
-<a href="#">
-<img src="assets/img/products/3.jpg" alt="Image">
-</a>
-</td>
-<td class="product-name">
-<a href="#">Cover Van</a>
-</td>
-<td class="product-price">
-<span class="unit-amount"> $75.00</span>
-</td>
-<td class="product-quantity">
-<div class="input-counter">
-<span class="minus-btn">
-<i class="bx bx-minus"></i>
-</span>
-<input type="text" ="1">
-<span class="plus-btn">
-<i class="bx bx-plus"></i>
-</span>
-</div>
-</td>
-<td class="product-subtotal">
-<span class="subtotal-amount">$75.00</span>
-<a href="#" class="remove">
-<i class="bx bx-trash"></i>
-</a>
-</td>
-</tr>
-<tr>
-<td class="product-thumbnail">
-<a href="#">
-<img src="assets/img/products/4.jpg" alt="Image">
-</a>
-</td>
-<td class="product-name">
-<a href="#">Mug Design</a>
-</td>
-<td class="product-price">
-<span class="unit-amount">$25.00</span>
-</td>
-<td class="product-quantity">
-<div class="input-counter">
-<span class="minus-btn">
-<i class="bx bx-minus"></i>
-</span>
-<input type="text" ="1">
-<span class="plus-btn">
-<i class="bx bx-plus"></i>
-</span>
-</div>
-</td>
-<td class="product-subtotal">
-<span class="subtotal-amount">$25.00</span>
-<a href="#" class="remove">
-<i class="bx bx-trash"></i>
-</a>
-</td>
-</tr>
+
+
+                                    @foreach (var cart in list.carts)
+                                    {
+                                        int gettotal = int.Parse(cart.service_quantity) * int.Parse(cart.service_price);
+                                        total = total + gettotal;
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="#">
+                                                    <img src="~/img/cart/@cart.image_stored" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td class="product-name">
+                                                <a href="#">@cart.service_name</a>
+                                            </td>
+                                            <td class="product-name">
+                                                <a href="#">@cart.service_size</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount" id="price_@cart.service_id.ToString()">$@cart.service_price.ToString()</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    
+                                                    <input type="number" min="1" id="dty_@cart.service_id.ToString()" value="@cart.service_quantity.ToString()">
+                                                    
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount" id="total_@cart.service_id.ToString()">$@gettotal</span>
+                                                <a href="#" class="remove">
+                                                    <i class="bx bx-trash"></i>
+                                                </a>
+                                            </td>
+                                            <script>
+                                                $(document).ready(function () {
+                                                    $("#dty_@cart.service_id.ToString()").click("Keyup mouseup", function () {
+                                                        var item_id = "@cart.service_id.ToString()";
+                                                        var quantity = $("#dty_@cart.service_id.ToString()").val();
+                                                        var item_name = "@cart.service_name.ToString()";
+                                                        var item_price = @cart.service_price.ToString();
+                                                        var total = quantity * item_price;
+
+                                                        $("#total_@cart.service_id.ToString()").html("$" + total);
+
+                                                    });
+                                                })
+                                            </script>
+                                            
+                                        </tr>
+                                     
+                                    }
+
 </tbody>
 </table>
 </div>
