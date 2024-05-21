@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "__Layout";
+}
+
+
+<div class="container">
+    <h1 class="display-1 mt-5 mb-3 border-bottom border-1 text-center">Add Admin</h1>
+    <h2 class="text-danger">@ViewBag.error</h2>
+    <form class="" asp-controller="Admin" asp-action="adding_admin">
+        <div class="form-group">
+            <input type="text" class="form-control mb-3" name="first_name" id="exampleInputPassword1" placeholder="Admin First Name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control mb-3" name="last_name" id="exampleInputPassword1" placeholder="Admin Last Name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control mb-3" name="e_mail" id="exampleInputPassword1" placeholder="Admin E-Mail adress">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control mb-3" name="password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control mb-3" name="confirm_password" id="exampleInputPassword1" placeholder="Confirm Password">
+        </div>
+        
+        <div class="text-end"><button type="submit" class="btn btn-primary">Submit</button></div>
+    </form>
+</div>
+

@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\img\cart\" />
+    <Folder Include="wwwroot\img\cart\" />
     <Folder Include="wwwroot\img\UploadedImages\services_images\" />
   </ItemGroup>
 

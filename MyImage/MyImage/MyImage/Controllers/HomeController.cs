@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyImage.DB_Context;
@@ -6,9 +8,12 @@ using MyImage.Models;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Claims;
 using static MyImage.Models.class_accounts;
 using static MyImage.Models.class_listModels;
 using static System.Net.Mime.MediaTypeNames;
+using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MyImage.Controllers
 {
@@ -36,45 +41,95 @@ namespace MyImage.Controllers
         public IActionResult Logining()
         {
 
-            var email = Request.Form["email"].FirstOrDefault();
-            var password = Request.Form["password"].FirstOrDefault();
+            var email = Request.Form["email"].ToString();
+            var password = Request.Form["password"].ToString();
 
-            List<class_user_table> user_details = database.user_tables.Where(a => a.e_mail == email).ToList();
-            List<class_accounts> user = database.Accounts.Where(a => a.e_mail == email && a.password == password).ToList();
+            var user_details = database.user_tables.FirstOrDefault(a => a.e_mail == email);
+            var user = database.Accounts.FirstOrDefault(a => a.e_mail == email && a.password == password);
 
-           
-                if (user.Count != 0)
+            ClaimsIdentity Identity = null;
+            bool isAuthenticate = false;
+            if (user != null)
+            {
+                if (user.roles_id == 2)
                 {
+                    Identity = new ClaimsIdentity(
+                        new[]
+                           {
+                             new Claim(ClaimTypes.Email , user.e_mail ),
+                             new Claim(ClaimTypes.Role , "Admin")
+                           }, CookieAuthenticationDefaults.AuthenticationScheme);
+                    isAuthenticate = true;
+                    HttpContext.Session.SetString("session_Id", user_details.costumer_id.ToString());
+                    HttpContext.Session.SetString("session_first_name", user_details.f_name.ToString());
+                    HttpContext.Session.SetString("session_last_name", user_details.l_name.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.gander.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.dob.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.p_number.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.addres.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.e_mail.ToString());
+                    HttpContext.Session.SetString("profile", user_details.Profile_photo.ToString());
 
-                    HttpContext.Session.SetString("session_Id", user_details[0].costumer_id.ToString());
-                    HttpContext.Session.SetString("session_first_name", user_details[0].f_name.ToString());
-                    HttpContext.Session.SetString("session_last_name", user_details[0].l_name.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].gander.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].dob.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].p_number.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].addres.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].e_mail.ToString());
-                    HttpContext.Session.SetString("profile", user_details[0].Profile_photo.ToString());
-
-                    Class_session.user_id = user_details[0].costumer_id.ToString();
-                    Class_session.user_fname = user_details[0].f_name.ToString();
-                    Class_session.user_lname = user_details[0].l_name.ToString();
-                    Class_session.gander = user_details[0].gander.ToString();
-                    Class_session.dateOB = user_details[0].dob.ToString();
-                    Class_session.number = user_details[0].p_number.ToString();
-                    Class_session.adders = user_details[0].addres.ToString();
-                    Class_session.user_email = user_details[0].e_mail.ToString();
-                    Class_session.image = user_details[0].Profile_photo.ToString();
-                    return Content("Loged In");
+                    Class_session.user_id = user_details.costumer_id.ToString();
+                    Class_session.user_fname = user_details.f_name.ToString();
+                    Class_session.user_lname = user_details.l_name.ToString();
+                    Class_session.gander = user_details.gander.ToString();
+                    Class_session.dateOB = user_details.dob.ToString();
+                    Class_session.number = user_details.p_number.ToString();
+                    Class_session.adders = user_details.addres.ToString();
+                    Class_session.user_email = user_details.e_mail.ToString();
+                    Class_session.image = user_details.Profile_photo.ToString();
                 }
-                else
+                if (user.roles_id == 1)
                 {
-                    return Content("E-mail or Password is incorrect");
+                    Identity = new ClaimsIdentity(
+                        new[]
+                           {
+                             new Claim(ClaimTypes.Email , user.e_mail ),
+                             new Claim(ClaimTypes.Role , "User")
+                           }, CookieAuthenticationDefaults.AuthenticationScheme);
+                    isAuthenticate = true;
+                    HttpContext.Session.SetString("session_Id", user_details.costumer_id.ToString());
+                    HttpContext.Session.SetString("session_first_name", user_details.f_name.ToString());
+                    HttpContext.Session.SetString("session_last_name", user_details.l_name.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.gander.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.dob.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.p_number.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.addres.ToString());
+                    HttpContext.Session.SetString("session_email", user_details.e_mail.ToString());
+                    HttpContext.Session.SetString("profile", user_details.Profile_photo.ToString());
+
+                    Class_session.user_id = user_details.costumer_id.ToString();
+                    Class_session.user_fname = user_details.f_name.ToString();
+                    Class_session.user_lname = user_details.l_name.ToString();
+                    Class_session.gander = user_details.gander.ToString();
+                    Class_session.dateOB = user_details.dob.ToString();
+                    Class_session.number = user_details.p_number.ToString();
+                    Class_session.adders = user_details.addres.ToString();
+                    Class_session.user_email = user_details.e_mail.ToString();
+                    Class_session.image = user_details.Profile_photo.ToString();
                 }
-         
-            
+                if (isAuthenticate)
+                {
+                    var principle = new ClaimsPrincipal(Identity);
+                    var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principle);
+                    if (user.roles_id == 2) //for admin
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
+                    else if (true) //for user
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+            }
+
+            return RedirectToAction(nameof(LogIn));
+
+
+
         }
-        public IActionResult logout() 
+        public IActionResult logout()
         {
             HttpContext.Session.Clear();
             Class_session.user_email = "";
@@ -89,7 +144,7 @@ namespace MyImage.Controllers
             return View(dataset);
         }
         [HttpPost]
-        public IActionResult signingup() 
+        public IActionResult signingup()
         {
 
             var first_name = Request.Form["first"];
@@ -138,26 +193,26 @@ namespace MyImage.Controllers
             {
                 return Content("Email is already registered");
             }
-                
+
         }
-        public IActionResult edit_profile() 
+        public IActionResult edit_profile()
         {
             return View(dataset);
         }
         [HttpPost]
-        public IActionResult edit_pro(IFormFile File) 
+        public IActionResult edit_pro(IFormFile File)
         {
-           
 
-                var FirstName = Request.Form["fname"].ToString();
-                var LastName = Request.Form["lname"].ToString();
-                var PhoneNumber = Request.Form["num"].ToString();
-                var Adress = Request.Form["adress"].ToString();
-                var BD = Request.Form["dob"].ToString();
-                var Gander = Request.Form["gander"].ToString();
-                var img = Request.Form["Pimg"].ToString();
 
-                
+            var FirstName = Request.Form["fname"].ToString();
+            var LastName = Request.Form["lname"].ToString();
+            var PhoneNumber = Request.Form["num"].ToString();
+            var Adress = Request.Form["adress"].ToString();
+            var BD = Request.Form["dob"].ToString();
+            var Gander = Request.Form["gander"].ToString();
+            var img = Request.Form["Pimg"].ToString();
+
+
             if (File != null)
             {
                 string filename = Path.Combine(DateTime.Now.ToString("MMddhhmmss") + File.FileName);
@@ -198,7 +253,7 @@ namespace MyImage.Controllers
                     user.gander = Gander;
                     database.Update(user);
                 }
-                else 
+                else
                 {
                     user.f_name = FirstName;
                     user.l_name = LastName;
@@ -216,27 +271,27 @@ namespace MyImage.Controllers
 
 
             var account = database.Accounts.FirstOrDefault(x => x.e_mail == Class_session.user_email);
-                if (account != null)
-                {
-                    account.first_name = FirstName;
-                    account.last_name = LastName;
+            if (account != null)
+            {
+                account.first_name = FirstName;
+                account.last_name = LastName;
 
-                    database.Update(account);
-                }
+                database.Update(account);
+            }
 
-                Class_session.user_fname = FirstName;
-                Class_session.user_lname = LastName;
-                Class_session.number = PhoneNumber;
-                Class_session.adders = Adress;
-                Class_session.dateOB = BD;
-                Class_session.gander = Gander;
-
-
-
-                database.SaveChanges();
+            Class_session.user_fname = FirstName;
+            Class_session.user_lname = LastName;
+            Class_session.number = PhoneNumber;
+            Class_session.adders = Adress;
+            Class_session.dateOB = BD;
+            Class_session.gander = Gander;
 
 
-                return RedirectToAction(nameof(Index));
+
+            database.SaveChanges();
+
+
+            return RedirectToAction(nameof(Index));
 
 
         }
@@ -270,6 +325,56 @@ namespace MyImage.Controllers
 
 
             return Content("gotit");
+        }
+        public IActionResult chackout()
+        {
+            var Ctype = Request.Form["type"].ToString();
+            var number = Request.Form["card_number"].ToString();
+            var Vnumber = Request.Form["VCard"].ToString();
+
+            if (Class_session.user_id != "")
+            {
+                string date = DateTime.Now.ToString("dd-MMM-yyyy");
+                string invoice = DateTime.Now.ToString("yyyyMMddHHmmss");
+                string user = Class_session.user_id.ToString();
+                int amount = 0;
+
+                foreach (class_cart values in list.carts)
+                {
+                    amount = amount + int.Parse(values.service_price) * int.Parse(values.service_quantity);
+
+                    class_order_details details = new class_order_details() 
+                    {
+                        user_id = user,
+                        order_date = date,
+                        order_invoice = invoice,
+                        order_service = values.service_name,
+                        user_uploaded_image = values.image_stored,
+                        order_quantity = values.service_quantity
+                    };
+                    database.Add(details);
+                    database.SaveChanges();
+                }
+
+                class_orders order = new class_orders() 
+                { 
+                    user_id = user,
+                    order_date = date,
+                    order_invoice = invoice,
+                    card_type = Ctype,
+                    card_number = number,
+                    V_car_number = Vnumber,
+                    order_total_amount = amount.ToString()
+                };
+                database.Add(order);
+                database.SaveChanges();
+
+                list.carts.Clear();
+
+                return RedirectToAction("cart", "Home", dataset);
+            }
+            return RedirectToAction("cart", "Home", dataset);
+
         }
         public IActionResult services() 
         {

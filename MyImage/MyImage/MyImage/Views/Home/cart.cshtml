@@ -4,6 +4,7 @@
 @model MyImage.Models.class_listModels;
 @{
     int total = 0;
+    int shipping = 10;
     int subtotal = 0;
 }
 <div class="inner-banner inner-bg6">
@@ -83,7 +84,9 @@
                                             </td>
                                             <script>
                                                 $(document).ready(function () {
+                                                   
                                                 $("#dty_@cart.cart_id.ToString()").bind("Keyup mouseup", function () {
+                                                    
                                                     var item_id = "@cart.cart_id.ToString()";
                                                         var quantity = $("#dty_@cart.cart_id.ToString()").val();
                                                         var item_name = "@cart.service_name.ToString()";
@@ -96,7 +99,7 @@
                                                         url: '@Url.Action("update_cart","Home")',
                                                         data:update_cart,
                                                         success: function (data) {
-                                                            
+                                                            location.reload();
                                                         },
                                                         error: function () { }
                                                     });
@@ -107,6 +110,7 @@
                                         </tr>
                                      }  
                                   
+
 
 </tbody>
 </table>
@@ -125,7 +129,7 @@ Continue Shopping
 </div>
 </div>
                 </div>
-                <form>
+                <form asp-controller="Home" asp-action="chackout" method="post">
 <div class="row">
 <div class="col-lg-6">
 <div class="cart-calc">
@@ -134,26 +138,22 @@ Continue Shopping
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<select>
-<option >Credit Card Type</option>
-<option >Another option</option>
-<option >A option</option>
+<select name="type">
+                                                    
+                                                    <option>Credit Card</option>
+
 </select>
 </div>
 </div>
 <div class="form-group col-lg-6">
-<input type="text" class="form-control" placeholder="Credit Card Number">
+<input type="text" name="card_number" class="form-control" placeholder="Credit Card Number">
 </div>
 <div class="form-group col-12">
-<input type="text" class="form-control" placeholder="Card Verification Number">
+<input type="text" class="form-control" name="VCard" placeholder="Card Verification Number">
 </div>
 </div>
-<div class="form-group">
-<input type="text" class="form-control" placeholder="Coupon Code">
-</div>
-<a href="#" class="default-btn">
-Apply Coupon
-</a>
+
+
 </div>
 </div>
 </div>
@@ -161,14 +161,31 @@ Apply Coupon
 <div class="cart-totals">
 <h3>Cart Totals</h3>
 <ul>
-                                    <li>Subtotal <span>$34.00</span></li>
-                                    <li>Shipping <span>$30.00</span></li>
-<li>Coupon <span>$20.00</span></li>
-<li>Total <span><b>$160.00</b></span></li>
+                                    <li>Subtotal <span>$@total.00</span></li>
+                                    <li>Shipping <span>$@shipping.00</span></li>
+
+<li>Total <span><b>$@(total+shipping).00</b></span></li>
 </ul>
-<a href="#" class="default-btn">
-Proceed To Checkout
-</a>
+
+
+                                @if (Class_session.user_email != "")
+                                {
+                                    <button type="submit"  class="default-btn ">
+                                        Proceed To Checkout
+                                    </button>
+                                }else
+                                {
+                                    <a class="default-btn ">
+                                        Please Login
+                                    </a>
+                                }
+                                <button type="submit" class="default-btn ">
+                                    Proceed To Checkout
+                                </button>
+
+
+
+
 </div>
 </div>
 </div>

@@ -12,7 +12,10 @@ builder.Services.AddDbContext<DB_context>(option =>
 {
     option.UseSqlServer("Server=DESKTOP-S8MJFJ5;Database=db_myimage;MultipleActiveResultSets=true;Trusted_Connection=True;TrustServerCertificate=True");
 });
-//"Server=.;passward=aptech;Database=db_myimage;MultipleActiveResultSets=true;Trusted_Connection=True;TrustServerCertificate=True"
+//For Server
+//Server=.;passward=aptech;Database=db_myimage;MultipleActiveResultSets=true;Trusted_Connection=True;TrustServerCertificate=True
+//for Home
+//Server=DESKTOP-S8MJFJ5;Database=db_myimage;MultipleActiveResultSets=true;Trusted_Connection=True;TrustServerCertificate=True
 builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddSession(option =>

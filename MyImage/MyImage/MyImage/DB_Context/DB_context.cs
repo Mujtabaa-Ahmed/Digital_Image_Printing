@@ -17,5 +17,7 @@ namespace MyImage.DB_Context
         public DbSet<class_sizes> sizes { get; set; }
         public DbSet<class_prices> prices { get; set; }
         public DbSet<class_roles> roles  { get; set; }
+        public DbSet<class_orders> orders { get; set; }
+        public DbSet<class_order_details> order_details { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using MyImage.DB_Context;
 using MyImage.Models;
@@ -18,57 +19,73 @@ namespace MyImage.Controllers
         {
             return View();
         }
-        public IActionResult Logining(class_accounts a)
-        {
-
-           
-            List<class_user_table> user_details = database.user_tables.Where(a => a.e_mail == a.e_mail).ToList();
-            List<class_accounts> user = database.Accounts.Where(a => a.e_mail == a.e_mail && a.password == a.password).ToList();
-
-
-            if (user.Count != 0)
-            {
-
-                if (user[0].roles_id == 2)
-                {
-                    HttpContext.Session.SetString("session_Id", user_details[0].costumer_id.ToString());
-                    HttpContext.Session.SetString("session_first_name", user_details[0].f_name.ToString());
-                    HttpContext.Session.SetString("session_last_name", user_details[0].l_name.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].gander.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].dob.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].p_number.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].addres.ToString());
-                    HttpContext.Session.SetString("session_email", user_details[0].e_mail.ToString());
-                    HttpContext.Session.SetString("profile", user_details[0].Profile_photo.ToString());
-
-                    Class_session.user_id = user_details[0].costumer_id.ToString();
-                    Class_session.user_fname = user_details[0].f_name.ToString();
-                    Class_session.user_lname = user_details[0].l_name.ToString();
-                    Class_session.gander = user_details[0].gander.ToString();
-                    Class_session.dateOB = user_details[0].dob.ToString();
-                    Class_session.number = user_details[0].p_number.ToString();
-                    Class_session.adders = user_details[0].addres.ToString();
-                    Class_session.user_email = user_details[0].e_mail.ToString();
-                    Class_session.image = user_details[0].Profile_photo.ToString();
-                    return RedirectToAction("Index","Admin");
-                }
-                else 
-                {
-                    return Content("no baba");
-                }
-
-                
-            }
-            else
-            {
-                return RedirectToAction(nameof(login));
-            }
-
-
-        }
+        
+        [Authorize(Roles = "User,Admin")]
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult add_admin(string message) 
+        {
+            ViewBag.error = message;
+            return View();
+        }
+        public IActionResult adding_admin() 
+        {
+            var first_name = Request.Form["first_name"];
+            var last_name = Request.Form["last_name"];
+            var e_mail = Request.Form["e_mail"].ToString();
+            var password = Request.Form["password"];
+            var cpassword = Request.Form["confirm_password"];
+
+            List<class_accounts> valid = database.Accounts.Where(a => a.e_mail == e_mail).ToList();
+
+            if (valid.Count == 0)
+            {
+                if (password == cpassword)
+                {
+                    class_accounts signups = new class_accounts()
+                    {
+                        first_name = first_name,
+                        last_name = last_name,
+                        e_mail = e_mail,
+                        password = password,
+                        roles_id = 2
+                    };
+
+
+
+                    List<class_accounts> getId = new List<class_accounts>();
+                    var gtt = getId.FirstOrDefault(a => a.first_name == first_name);
+
+                    class_user_table user = new class_user_table()
+                    {
+                        f_name = first_name,
+                        l_name = last_name,
+                        addres = "-",
+                        dob = "-",
+                        gander = "-",
+                        p_number = 00000,
+                        e_mail = e_mail,
+                        Profile_photo = ""
+                    };
+
+
+                    database.Add(signups);
+                    database.Add(user);
+                    database.SaveChanges();
+                    return RedirectToAction("add_admin", "Admin", new { message = "Loged In" });
+                }
+                else 
+                {
+                    return RedirectToAction("add_admin", "Admin", new { message = "Error" });
+                }
+            }
+            else
+            {
+                return Content("Email is already registered");
+            }
+
         }
         public IActionResult AddCate() 
         {
